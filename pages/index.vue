@@ -5,7 +5,8 @@
         fixed
         top-0
         left-0
-        px-32
+        px-0
+        md:px-32
         py-12
         flex
         text-xl
@@ -15,7 +16,7 @@
         z-50
       "
     >
-      <a href="#" class="logo">C I A</a>
+      <a href="#top" class="logo mx-auto">C I A</a>
       <ul
         class="list-none content-center items-center text-white hidden md:flex"
       >
@@ -40,7 +41,7 @@
         id="elephants"
       />
       <img
-        class="fixed left-1/2 right-1/2 z-0"
+        class="fixed mx-auto z-0"
         src="/images/background/moon.svg"
         id="moon"
       />
@@ -79,9 +80,9 @@
     </section>
     <section class="content" id="about">
       <div class="pt-16 sm:pt-0">
-        <h2 class="text-3xl sm:text-5xl text-white mb-3 uppercase">
+        <h1 class="text-3xl sm:text-5xl text-white mb-3 uppercase">
           Cardano In Africa
-        </h2>
+        </h1>
         <h4 class="text-2xl text-white mb-3">
           Welcome to the unofficial stake pool for Cardano in Africa!
         </h4>
@@ -134,7 +135,7 @@
     <section class="z-10 content text-gray-200" id="contact">
       <div class="flex flex-col">
         <h2 class="text-5xl text-white mb-3">Contact</h2>
-        <h4 class="text-2xl my-4">
+        <h4 class="text-xl my-4 overflow-ellipsis">
           You can send us an email at
           <a href="mailto:admin@cardanoin.africa">admin@cardanoin.africa</a>
         </h4>
