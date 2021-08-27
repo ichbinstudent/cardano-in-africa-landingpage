@@ -15,7 +15,7 @@
         z-50
       "
     >
-      <a href="#" class="logo">Logo</a>
+      <a href="#" class="logo">C I A</a>
       <ul
         class="list-none content-center items-center text-white hidden md:flex"
       >
