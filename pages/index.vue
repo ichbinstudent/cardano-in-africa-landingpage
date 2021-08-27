@@ -20,7 +20,7 @@
         class="list-none content-center items-center text-white hidden md:flex"
       >
         <li class="mx-2">
-          <nuxt-link to="#" class="rounded-lg p-2"> Home </nuxt-link>
+          <nuxt-link to="#top" class="rounded-lg p-2"> Home </nuxt-link>
         </li>
         <li class="mx-2">
           <nuxt-link to="#about" class="rounded-lg p-2">About</nuxt-link>
@@ -33,14 +33,14 @@
         </li>
       </ul>
     </header>
-    <section class="relative w-full scroll-art">
+    <section class="relative w-full scroll-art" id="top">
       <img
         class="z-10 top-auto"
         src="/images/background/elephants.png"
         id="elephants"
       />
       <img
-        class="left-1/2 right-1/2 z-0"
+        class="fixed left-1/2 right-1/2 z-0"
         src="/images/background/moon.svg"
         id="moon"
       />
@@ -77,63 +77,110 @@
         About us
       </a>
     </section>
-    <section class="z-10 content" id="about">
-      <div>
-        <h2 class="text-5xl text-white mb-3 uppercase">Cardano In Africa</h2>
+    <section class="content" id="about">
+      <div class="pt-16 sm:pt-0">
+        <h2 class="text-3xl sm:text-5xl text-white mb-3 uppercase">
+          Cardano In Africa
+        </h2>
         <h4 class="text-2xl text-white mb-3">
           Welcome to the unofficial stake pool for Cardano in Africa!
         </h4>
-        <p class="text-gray-300">
+        <p class="text-gray-200">
           Our goal is to increase adoption and provide education to the people
           of the continent.
         </p>
       </div>
     </section>
     <section class="z-10 content" id="stake">
-      <div class="">
+      <div class="text-gray-200 flex flex-col w-full md:max-w-5xl">
         <h2 class="text-5xl text-white mb-3">Stake</h2>
-        <p class="text-gray-300">
-          Lorem ipsum dolor sit amet, consectetur adipiscing elit. Sed in nibh
-          tristique, convallis dui vitae, posuere nunc. Suspendisse elementum
-          consequat dolor, vel aliquet lacus ultricies eu. Sed venenatis sapien
-          odio, id fringilla sapien vehicula non. Duis sapien eros, sagittis sit
-          amet lectus sed, sollicitudin sagittis lacus. Curabitur tincidunt
-          hendrerit fringilla. Quisque fermentum vulputate sem vel sollicitudin.
-          Ut quis viverra mauris. Integer non finibus lectus. Morbi semper diam
-          mauris, tempus finibus orci mollis at. Quisque bibendum ligula sit
-          amet scelerisque porttitor. Aenean eget dui tempus, accumsan nibh
-          consequat, pellentesque erat. luctus blandit.
-          <a href="http://www.freepik.com">Designed by Freepik</a>
+        <p class="">
+          Join our cause to improve the education on blockchain and the adoption
+          of Cardano in Africa. You can find more technical details on
+          <a
+            class="underline"
+            href="https://adapools.org/pool/9e4ecaff3dac5c4c754a96cad961b404b9eab497afe4357160bb21c7"
+            target="_blank"
+            rel="noopener"
+            >ADAPools</a
+          >
         </p>
+        <h4 class="text-2xl my-4">Pool Details</h4>
+
+        <table class="hidden md:show">
+          <tr>
+            <td>Ticker</td>
+            <td>CIA</td>
+          </tr>
+          <tr>
+            <td>Pool Name</td>
+            <td>Cardano in Africa</td>
+          </tr>
+          <tr>
+            <td>Pool ID</td>
+            <td class="truncate">
+              9e4ecaff3dac5c4c754a96cad961b404b9eab497afe4357160bb21c7
+            </td>
+          </tr>
+        </table>
+
+        <div
+          class="
+            bg-gray-900
+            rounded-lg
+            border border-gray-800
+            p-4
+            flex flex-col
+          "
+        >
+          <h5 class="underline">Ticker</h5>
+          CIA
+          <h5 class="underline mt-1">Pool Name</h5>
+          Cardano in Africa
+          <h5 class="underline mt-1">Pool ID (click to copy)</h5>
+          <input
+            type="text"
+            class="overflow-ellipsis rounded-lg bg-gray-700 p-1 cursor-pointer"
+            @click="copyToClipboard"
+            value="9e4ecaff3dac5c4c754a96cad961b404b9eab497afe4357160bb21c7"
+            readonly
+          />
+        </div>
       </div>
     </section>
-    <section class="z-10 content" id="contact">
-      <div class="">
+    <section class="z-10 content text-gray-200" id="contact">
+      <div class="flex flex-col">
         <h2 class="text-5xl text-white mb-3">Contact</h2>
-        <p class="text-gray-300">
-          Lorem ipsum dolor sit amet, consectetur adipiscing elit. Sed in nibh
-          tristique, convallis dui vitae, posuere nunc. Suspendisse elementum
-          consequat dolor, vel aliquet lacus ultricies eu. Sed venenatis sapien
-          odio, id fringilla sapien vehicula non. Duis sapien eros, sagittis sit
-          amet lectus sed, sollicitudin sagittis lacus. Curabitur tincidunt
-          hendrerit fringilla. Quisque fermentum vulputate sem vel sollicitudin.
-          Ut quis viverra mauris. Integer non finibus lectus. Morbi semper diam
-          mauris, tempus finibus orci mollis at. Quisque bibendum ligula sit
-          amet scelerisque porttitor. Aenean eget dui tempus, accumsan nibh
-          consequat, pellentesque erat. luctus blandit.
-        </p>
+        <h4 class="text-2xl my-4">
+          You can send us an email at
+          <a href="mailto:admin@cardanoin.africa">admin@cardanoin.africa</a>
+        </h4>
+        <p class="text-gray-200"></p>
       </div>
     </section>
     <footer>
-      <div class="flex justify-center items-center h-32 text-white">
+      <div
+        class="
+          flex
+          justify-center
+          items-center
+          h-32
+          text-white
+          px-8
+          text-center
+        "
+      >
         <p>
-        <a href="http://www.freepik.com">Illustrations designed by Freepik</a> | Copyright by David Höglinger
+          <a href="http://www.freepik.com">Illustrations designed by Freepik</a>
+          | Copyright by David Höglinger
         </p>
       </div>
     </footer>
-    <a href="#" class="fixed bg-white rounded-full p-4 right-16 bottom-16 z-50"
-      ><img class="h-8 w-8" src="/images/keyboard_arrow_up_black_24dp.svg" /></a
-    >
+    <a
+      href="#top"
+      class="fixed bg-white rounded-full p-4 right-16 bottom-16 z-50"
+      ><img class="h-8 w-8" src="/images/keyboard_arrow_up_black_24dp.svg"
+    /></a>
   </div>
 </template>
 
@@ -142,6 +189,14 @@ import Vue from "vue";
 
 export default Vue.extend({
   mounted() {
+    if (
+      ["#top", "#about", "#stake", "#contact"].indexOf(
+        window.location.href.split("/").slice(-1)[0]
+      ) < 0
+    ) {
+      window.location.href = "#top";
+    }
+
     let stars = window.document.getElementById("stars");
     let moon = window.document.getElementById("moon");
     let floor = window.document.getElementById("floor");
@@ -149,20 +204,31 @@ export default Vue.extend({
     let floor3 = window.document.getElementById("floor3");
     let elephants = window.document.getElementById("elephants");
     let btn = window.document.getElementById("details-btn");
+    let header = window.document.getElementsByTagName("header");
 
     window.addEventListener("scroll", function () {
       let value = window.scrollY;
-      if (value < 1000) {
+      if (value < 1100) {
+        header[0].style.background = 'transparent';
+
         stars.style.left = value * 0.25 + "px";
-        moon.style.top = 10 + value * 0.1 + "vh";
+        // moon.style.top = 10 + value * 0.1 + "vh";
         floor3.style.bottom = -60 + value * -0.2 + "px";
         floor2.style.bottom = -80 + value * -0.1 + "px";
         // floor.style.bottom = value * -0.5 + "px";
         // elephants.style.bottom = 12 + value * 0.004 + "vh";
         elephants.style.right = value * -0.12 + "px";
-        btn.style.opacity = 1 - value * 0.003;
+        moon.style.opacity = 1 - value * 0.002;
+      } else {
+        header[0].style.background = '#1c0522';
       }
     });
+  },
+  methods: {
+    copyToClipboard(event: any) {
+      event.target.select();
+      document.execCommand("copy");
+    },
   },
 });
 </script>
