@@ -107,23 +107,6 @@
         </p>
         <h4 class="text-2xl my-4">Pool Details</h4>
 
-        <table class="hidden md:show">
-          <tr>
-            <td>Ticker</td>
-            <td>CIA</td>
-          </tr>
-          <tr>
-            <td>Pool Name</td>
-            <td>Cardano in Africa</td>
-          </tr>
-          <tr>
-            <td>Pool ID</td>
-            <td class="truncate">
-              9e4ecaff3dac5c4c754a96cad961b404b9eab497afe4357160bb21c7
-            </td>
-          </tr>
-        </table>
-
         <div
           class="
             bg-gray-900
@@ -206,21 +189,22 @@ export default Vue.extend({
     let btn = window.document.getElementById("details-btn");
     let header = window.document.getElementsByTagName("header");
 
-    window.addEventListener("scroll", function () {
+    window.addEventListener("scroll", () => {
       let value = window.scrollY;
       if (value < 1100) {
-        header[0].style.background = 'transparent';
+        header[0].style.background = "transparent";
 
-        stars.style.left = value * 0.25 + "px";
-        // moon.style.top = 10 + value * 0.1 + "vh";
-        floor3.style.bottom = -60 + value * -0.2 + "px";
-        floor2.style.bottom = -80 + value * -0.1 + "px";
-        // floor.style.bottom = value * -0.5 + "px";
-        // elephants.style.bottom = 12 + value * 0.004 + "vh";
-        elephants.style.right = value * -0.12 + "px";
-        moon.style.opacity = 1 - value * 0.002;
+        if (stars) stars.style.left = value * 0.25 + "px";
+
+        if (floor3 && floor2) {
+          floor3.style.bottom = -60 + value * -0.2 + "px";
+          floor2.style.bottom = -80 + value * -0.1 + "px";
+        }
+
+        if (elephants) elephants.style.right = value * -0.12 + "px";
+        if (moon) moon.style.opacity = (1 - value * 0.002).toString();
       } else {
-        header[0].style.background = '#1c0522';
+        header[0].style.background = "#1c0522";
       }
     });
   },
