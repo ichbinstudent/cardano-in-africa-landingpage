@@ -23,6 +23,7 @@
     "@nuxtjs/eslint-module": "^3.0.2",
     "@nuxtjs/pwa": "^3.3.5",
     "@nuxtjs/tailwindcss": "^4.2.0",
+    "@types/smoothscroll-polyfill": "^0.3.1",
     "eslint": "^7.29.0",
     "eslint-plugin-nuxt": "^2.0.0",
     "eslint-plugin-vue": "^7.12.1",
@@ -31,6 +32,7 @@
     "postcss": "^8.3.5",
     "sass": "^1.38.1",
     "sass-loader": "10",
+    "smoothscroll-polyfill": "^0.4.4",
     "tailwindcss": "^2.2.8"
   }
 }

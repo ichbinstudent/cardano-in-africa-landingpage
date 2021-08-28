@@ -13,29 +13,32 @@
       "
     >
       <div class="max-w-7xl w-full mx-auto flex justify-between items-center px-4 md:px-16">
-        <a href="#top" class="logo md:m-0">C I A</a>
+        <div class="logo md:m-0 cursor-pointer" @click="scrollIntoView('#home')">C I A</div>
         <ul
           class="list-none content-center items-center text-white hidden md:flex"
         >
           <li class="mx-2">
-            <nuxt-link to="#top" class="rounded-lg p-2">
+            <div
+              class="navbar-home nuxt-link-active rounded-lg p-2 cursor-pointer"
+              @click="scrollIntoView('#home')"
+            >
               Home
-            </nuxt-link>
+            </div>
           </li>
           <li class="mx-2">
-            <nuxt-link to="#about" class="rounded-lg p-2">
+            <div class="navbar-about rounded-lg p-2 cursor-pointer" @click="scrollIntoView('#about')">
               About
-            </nuxt-link>
+            </div>
           </li>
           <li class="mx-2">
-            <nuxt-link to="#stake" class="rounded-lg p-2">
+            <div class="navbar-stake rounded-lg p-2 cursor-pointer" @click="scrollIntoView('#stake')">
               Stake
-            </nuxt-link>
+            </div>
           </li>
           <li class="mx-2">
-            <nuxt-link to="#contact" class="rounded-lg p-2">
+            <div class="navbar-contact rounded-lg p-2 cursor-pointer" @click="scrollIntoView('#contact')">
               Contact
-            </nuxt-link>
+            </div>
           </li>
         </ul>
         <button
@@ -53,7 +56,7 @@
             stroke="currentColor"
             aria-hidden="true"
           >
-            <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M4 6h16M4 12h16M4 18h16" />
+            <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M4 6h16M4 12h16M4 18h16"/>
           </svg>
         </button>
       </div>
@@ -82,7 +85,7 @@
           >
             <div class="pt-6 pb-6 px-5">
               <div class="flex items-center justify-between">
-                <div />
+                <div/>
                 <div class="-mr-3 ">
                   <button
                     type="button"
@@ -99,17 +102,16 @@
                       stroke="currentColor"
                       aria-hidden="true"
                     >
-                      <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M6 18L18 6M6 6l12 12" />
+                      <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M6 18L18 6M6 6l12 12"/>
                     </svg>
                   </button>
                 </div>
               </div>
               <div class="mt-6">
                 <nav class="grid gap-y-8">
-                  <a
-                    href="#top"
-                    class="-m-3 p-3 flex items-center rounded-md hover:bg-gray-900"
-                    @click="navbar = !navbar"
+                  <div
+                    class="navbar-home nuxt-link-active -m-3 p-3 flex items-center rounded-md hover:bg-gray-900"
+                    @click="() => {navbar = !navbar; scrollToTop()}"
                   >
                     <!-- Heroicon name: outline/chart-bar -->
                     <!--                    <svg-->
@@ -130,12 +132,11 @@
                     <span class="ml-3 text-base font-medium text-gray-200">
                       Home
                     </span>
-                  </a>
+                  </div>
 
-                  <a
-                    href="#about"
-                    class="-m-3 p-3 flex items-center rounded-md hover:bg-gray-900"
-                    @click="navbar = !navbar"
+                  <div
+                    class="navbar-about -m-3 p-3 flex items-center rounded-md hover:bg-gray-900"
+                    @click="() => {navbar = !navbar; scrollIntoView('#about')}"
                   >
                     <!-- Heroicon name: outline/cursor-click -->
                     <!--                    <svg-->
@@ -156,12 +157,11 @@
                     <span class="ml-3 text-base font-medium text-gray-200">
                       About
                     </span>
-                  </a>
+                  </div>
 
-                  <a
-                    href="#stake"
-                    class="-m-3 p-3 flex items-center rounded-md hover:bg-gray-900"
-                    @click="navbar = !navbar"
+                  <div
+                    class="navbar-stake -m-3 p-3 flex items-center rounded-md hover:bg-gray-900"
+                    @click="() => {navbar = !navbar; scrollIntoView('#stake')}"
                   >
                     <!-- Heroicon name: outline/shield-check -->
                     <!--                    <svg-->
@@ -182,12 +182,11 @@
                     <span class="ml-3 text-base font-medium text-gray-200">
                       Stake
                     </span>
-                  </a>
+                  </div>
 
-                  <a
-                    href="#contact"
-                    class="-m-3 p-3 flex items-center rounded-md hover:bg-gray-900"
-                    @click="navbar = !navbar"
+                  <div
+                    class="navbar-contact -m-3 p-3 flex items-center rounded-md hover:bg-gray-900"
+                    @click="() => {navbar = !navbar; scrollIntoView('#contact')}"
                   >
                     <!-- Heroicon name: outline/view-grid -->
                     <!--                    <svg-->
@@ -208,7 +207,7 @@
                     <span class="ml-3 text-base font-medium text-gray-200">
                       Contact
                     </span>
-                  </a>
+                  </div>
                 </nav>
               </div>
             </div>
@@ -216,7 +215,7 @@
         </div>
       </transition>
     </header>
-    <section id="top" class="relative w-full scroll-art">
+    <section id="home" class="relative w-full scroll-art">
       <img
         id="elephants"
         class="z-10 top-auto"
@@ -243,7 +242,7 @@
         class="mountain top-auto"
         src="/images/background/floor.png"
       >
-      <a
+      <div
         id="details-btn"
         class="
           uppercase
@@ -254,11 +253,12 @@
           rounded-xl
           text-2xl
           z-20
+          cursor-pointer
         "
-        href="#about"
+        @click="scrollIntoView('#about')"
       >
         About us
-      </a>
+      </div>
     </section>
     <section id="about" class="content">
       <div class="pt-16 sm:pt-0">
@@ -332,7 +332,7 @@
           You can send us an email at
           <a href="mailto:admin@cardanoin.africa">admin@cardanoin.africa</a>
         </h4>
-        <p class="text-gray-200" />
+        <p class="text-gray-200"/>
       </div>
     </section>
     <footer>
@@ -353,19 +353,23 @@
         </p>
       </div>
     </footer>
-    <a
-      href="#top"
-      class="fixed bg-white rounded-lg p-2 right-8 md:right-16 bottom-16 z-50"
+    <div
+      @click="scrollToTop"
+      class="fixed bg-white rounded-lg p-2 right-8 md:right-16 bottom-16 z-50 cursor-pointer"
     >
       <img
         class="h-8 w-8"
         src="/images/keyboard_arrow_up_black_24dp.svg"
-      ></a>
+      ></div>
   </div>
 </template>
 
 <script lang="ts">
 import Vue from 'vue'
+import smoothscroll from 'smoothscroll-polyfill'
+
+// kick off the polyfill!
+smoothscroll.polyfill()
 
 export default Vue.extend({
   data () {
@@ -377,12 +381,6 @@ export default Vue.extend({
     title: 'Cardano in Africa | Home'
   },
   mounted () {
-    if (
-      !['#top', '#about', '#stake', '#contact'].includes(window.location.href.split('/').slice(-1)[0])
-    ) {
-      window.location.href = '#top'
-    }
-
     const stars = window.document.getElementById('stars')
     const moon = window.document.getElementById('moon')
     // const floor = window.document.getElementById('floor')
@@ -393,8 +391,17 @@ export default Vue.extend({
     const header = window.document.getElementsByTagName('header')
 
     window.addEventListener('scroll', () => {
+      ['home', 'about', 'stake', 'contact'].forEach((selector) => {
+        const element = document.querySelector('#' + selector)
+        if (this.isInViewport(element)) {
+          document.querySelector('.navbar-' + selector).classList.add('nuxt-link-active')
+        } else {
+          document.querySelector('.navbar-' + selector).classList.remove('nuxt-link-active')
+        }
+      })
+
       const value = window.scrollY
-      if (value < 1100) {
+      if (value < 950) {
         header[0].style.background = 'transparent'
 
         if (stars) {
@@ -421,6 +428,24 @@ export default Vue.extend({
     copyToClipboard (event: any) {
       event.target.select()
       document.execCommand('copy')
+    },
+    scrollToTop () {
+      window.scroll({
+        top: 0,
+        left: 0,
+        behavior: 'smooth'
+      })
+    },
+    scrollIntoView (selector) {
+      document.querySelector(selector).scrollIntoView({ behavior: 'smooth' })
+    },
+    isInViewport (element) {
+      const rect = element.getBoundingClientRect()
+      const center = (rect.bottom + rect.top) / 2
+      return (
+        center >= 0 &&
+        center <= (window.innerHeight || document.documentElement.clientHeight)
+      )
     }
   }
 })
