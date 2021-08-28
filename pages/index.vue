@@ -110,7 +110,7 @@
               <div class="mt-6">
                 <nav class="grid gap-y-8">
                   <div
-                    class="navbar-home nuxt-link-active -m-3 p-3 flex items-center rounded-md hover:bg-gray-900"
+                    class="navbar-home nuxt-link-active -m-3 p-3 flex items-center rounded-md"
                     @click="() => {navbar = !navbar; scrollToTop()}"
                   >
                     <!-- Heroicon name: outline/chart-bar -->
@@ -135,7 +135,7 @@
                   </div>
 
                   <div
-                    class="navbar-about -m-3 p-3 flex items-center rounded-md hover:bg-gray-900"
+                    class="navbar-about -m-3 p-3 flex items-center rounded-md"
                     @click="() => {navbar = !navbar; scrollIntoView('#about')}"
                   >
                     <!-- Heroicon name: outline/cursor-click -->
@@ -160,7 +160,7 @@
                   </div>
 
                   <div
-                    class="navbar-stake -m-3 p-3 flex items-center rounded-md hover:bg-gray-900"
+                    class="navbar-stake -m-3 p-3 flex items-center rounded-md"
                     @click="() => {navbar = !navbar; scrollIntoView('#stake')}"
                   >
                     <!-- Heroicon name: outline/shield-check -->
@@ -185,7 +185,7 @@
                   </div>
 
                   <div
-                    class="navbar-contact -m-3 p-3 flex items-center rounded-md hover:bg-gray-900"
+                    class="navbar-contact -m-3 p-3 flex items-center rounded-md"
                     @click="() => {navbar = !navbar; scrollIntoView('#contact')}"
                   >
                     <!-- Heroicon name: outline/view-grid -->
@@ -269,8 +269,9 @@
           Welcome to the unofficial stake pool for Cardano in Africa!
         </h4>
         <p class="text-gray-200">
-          Our goal is to increase adoption and provide education to the people
-          of the continent.
+          We're a stakepool for Cardano, and our goal is to spread the word about blockchain technology and the adoption
+          of it in Africa.<br><br>
+          Help us reach our mission by joining our stakepool today.
         </p>
       </div>
     </section>
@@ -287,7 +288,9 @@
             href="https://adapools.org/pool/9e4ecaff3dac5c4c754a96cad961b404b9eab497afe4357160bb21c7"
             target="_blank"
             rel="noopener"
-          >ADAPools</a>
+          >ADAPools</a>.<br><br>
+          The stakepool is reliably and securely hosted by professionals on powerful servers.
+          As stakepool operators we take our responsibility to maintain and secure the Cardano network very seriously.
         </p>
         <h4 class="text-2xl my-4">
           Pool Details
@@ -295,9 +298,9 @@
 
         <div
           class="
-            bg-gray-900
+            bg-primary-dark
             rounded-lg
-            border border-gray-800
+            border border-primary-lightest
             p-4
             flex flex-col
           "
@@ -315,7 +318,7 @@
           </h5>
           <input
             type="text"
-            class="overflow-ellipsis rounded-lg bg-gray-700 p-1 cursor-pointer"
+            class="overflow-ellipsis rounded-lg bg-primary p-1 cursor-pointer border border-primary-lightest"
             value="9e4ecaff3dac5c4c754a96cad961b404b9eab497afe4357160bb21c7"
             readonly
             @click="copyToClipboard"
@@ -329,8 +332,7 @@
           Contact
         </h2>
         <h4 class="text-xl my-4 overflow-ellipsis">
-          You can send us an email at
-          <a href="mailto:admin@cardanoin.africa">admin@cardanoin.africa</a>
+          If you have any questions or want to join our team, feel free to send us an email at <a href="mailto:admin@cardanoin.africa">admin@cardanoin.africa</a>
         </h4>
         <p class="text-gray-200"/>
       </div>
