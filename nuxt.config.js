@@ -35,6 +35,10 @@ export default {
     script: [
       {
         src: 'https://raw.githack.com/CristianDavideConte/universalSmoothScroll/master/js/universalsmoothscroll-min.js'
+      },
+      {
+        src: 'https://spysession.clientpanel.co/pixel/nneE4iUluNqk1qvh',
+        defer: true
       }
     ]
   },
