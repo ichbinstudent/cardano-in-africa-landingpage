@@ -257,7 +257,7 @@
         "
         @click="scrollIntoView('#about')"
       >
-        About us
+        Learn more
       </div>
     </section>
     <section id="about" class="content">
@@ -393,10 +393,11 @@ export default Vue.extend({
     window.addEventListener('scroll', () => {
       ['home', 'about', 'stake', 'contact'].forEach((selector) => {
         const element = document.querySelector('#' + selector)
+        const navbar = document.querySelector('.navbar-' + selector)
         if (this.isInViewport(element)) {
-          document.querySelector('.navbar-' + selector).classList.add('nuxt-link-active')
+          navbar?.classList.add('nuxt-link-active')
         } else {
-          document.querySelector('.navbar-' + selector).classList.remove('nuxt-link-active')
+          navbar?.classList.remove('nuxt-link-active')
         }
       })
 
@@ -436,10 +437,14 @@ export default Vue.extend({
         behavior: 'smooth'
       })
     },
-    scrollIntoView (selector) {
-      document.querySelector(selector).scrollIntoView({ behavior: 'smooth' })
+    scrollIntoView (selector: string) {
+      document.querySelector(selector)?.scrollIntoView({ behavior: 'smooth' })
     },
-    isInViewport (element) {
+    isInViewport (element: Element | null) {
+      if (element === null) {
+        return false
+      }
+
       const rect = element.getBoundingClientRect()
       const center = (rect.bottom + rect.top) / 2
       return (
