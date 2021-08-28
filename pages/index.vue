@@ -5,43 +5,216 @@
         fixed
         top-0
         left-0
-        px-0
-        md:px-32
-        lg:px-64
-        py-12
+        py-8
         flex
         text-xl
-        justify-between
-        items-center
         w-full
         z-50
       "
     >
-      <a href="#top" class="logo mx-auto md:m-0">C I A</a>
-      <ul
-        class="list-none content-center items-center text-white hidden md:flex"
+      <div class="max-w-7xl w-full mx-auto flex justify-between items-center px-4 md:px-16">
+        <a href="#top" class="logo md:m-0">C I A</a>
+        <ul
+          class="list-none content-center items-center text-white hidden md:flex"
+        >
+          <li class="mx-2">
+            <nuxt-link to="#top" class="rounded-lg p-2">
+              Home
+            </nuxt-link>
+          </li>
+          <li class="mx-2">
+            <nuxt-link to="#about" class="rounded-lg p-2">
+              About
+            </nuxt-link>
+          </li>
+          <li class="mx-2">
+            <nuxt-link to="#stake" class="rounded-lg p-2">
+              Stake
+            </nuxt-link>
+          </li>
+          <li class="mx-2">
+            <nuxt-link to="#contact" class="rounded-lg p-2">
+              Contact
+            </nuxt-link>
+          </li>
+        </ul>
+        <button
+          type="button"
+          class="md:hidden rounded-md p-2 inline-flex items-center justify-center text-gray-200 hover:text-gray-500 hover:bg-gray-100 focus:outline-none focus:ring-2 focus:ring-inset focus:ring-indigo-500"
+          @click="navbar = !navbar"
+        >
+          <span class="sr-only">Open menu</span>
+          <!-- Heroicon name: outline/menu -->
+          <svg
+            class="h-6 w-6"
+            xmlns="http://www.w3.org/2000/svg"
+            fill="none"
+            viewBox="0 0 24 24"
+            stroke="currentColor"
+            aria-hidden="true"
+          >
+            <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M4 6h16M4 12h16M4 18h16" />
+          </svg>
+        </button>
+      </div>
+
+      <transition
+        enter-active-class="duration-200 ease-out"
+        enter-from-class="opacity-0 scale-95"
+        enter-to-class="opacity-100 scale-100"
+        leave-active-class="duration-100 ease-in"
+        leave-from-class="opacity-100 scale-100"
+        leave-to-class="opacity-0 scale-95"
       >
-        <li class="mx-2">
-          <nuxt-link to="#top" class="rounded-lg p-2">
-            Home
-          </nuxt-link>
-        </li>
-        <li class="mx-2">
-          <nuxt-link to="#about" class="rounded-lg p-2">
-            About
-          </nuxt-link>
-        </li>
-        <li class="mx-2">
-          <nuxt-link to="#stake" class="rounded-lg p-2">
-            Stake
-          </nuxt-link>
-        </li>
-        <li class="mx-2">
-          <nuxt-link to="#contact" class="rounded-lg p-2">
-            Contact
-          </nuxt-link>
-        </li>
-      </ul>
+        <!--
+          Mobile menu, show/hide based on mobile menu state.
+
+          Entering: "duration-200 ease-out"
+            From: "opacity-0 scale-95"
+            To: "opacity-100 scale-100"
+          Leaving: "duration-100 ease-in"
+            From: "opacity-100 scale-100"
+            To: "opacity-0 scale-95"
+        -->
+        <div v-show="navbar" class="absolute top-0 inset-x-0 p-2 transition transform origin-top-right md:hidden">
+          <div
+            class="rounded-lg shadow-lg ring-1 ring-black ring-opacity-5 bg-primary text-gray-200 divide-y-2 divide-gray-50"
+          >
+            <div class="pt-6 pb-6 px-5">
+              <div class="flex items-center justify-between">
+                <div />
+                <div class="-mr-3 ">
+                  <button
+                    type="button"
+                    class="rounded-md p-2 inline-flex items-center justify-center text-gray-200 hover:text-gray-500 hover:bg-gray-100 focus:outline-none focus:ring-2 focus:ring-inset focus:ring-indigo-500"
+                    @click="navbar = !navbar"
+                  >
+                    <span class="sr-only">Close menu</span>
+                    <!-- Heroicon name: outline/x -->
+                    <svg
+                      class="h-6 w-6"
+                      xmlns="http://www.w3.org/2000/svg"
+                      fill="none"
+                      viewBox="0 0 24 24"
+                      stroke="currentColor"
+                      aria-hidden="true"
+                    >
+                      <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M6 18L18 6M6 6l12 12" />
+                    </svg>
+                  </button>
+                </div>
+              </div>
+              <div class="mt-6">
+                <nav class="grid gap-y-8">
+                  <a
+                    href="#top"
+                    class="-m-3 p-3 flex items-center rounded-md hover:bg-gray-900"
+                    @click="navbar = !navbar"
+                  >
+                    <!-- Heroicon name: outline/chart-bar -->
+                    <!--                    <svg-->
+                    <!--                      class="flex-shrink-0 h-6 w-6 text-indigo-600"-->
+                    <!--                      xmlns="http://www.w3.org/2000/svg"-->
+                    <!--                      fill="none"-->
+                    <!--                      viewBox="0 0 24 24"-->
+                    <!--                      stroke="currentColor"-->
+                    <!--                      aria-hidden="true"-->
+                    <!--                    >-->
+                    <!--                      <path-->
+                    <!--                        stroke-linecap="round"-->
+                    <!--                        stroke-linejoin="round"-->
+                    <!--                        stroke-width="2"-->
+                    <!--                        d="M9 19v-6a2 2 0 00-2-2H5a2 2 0 00-2 2v6a2 2 0 002 2h2a2 2 0 002-2zm0 0V9a2 2 0 012-2h2a2 2 0 012 2v10m-6 0a2 2 0 002 2h2a2 2 0 002-2m0 0V5a2 2 0 012-2h2a2 2 0 012 2v14a2 2 0 01-2 2h-2a2 2 0 01-2-2z"-->
+                    <!--                      />-->
+                    <!--                    </svg>-->
+                    <span class="ml-3 text-base font-medium text-gray-200">
+                      Home
+                    </span>
+                  </a>
+
+                  <a
+                    href="#about"
+                    class="-m-3 p-3 flex items-center rounded-md hover:bg-gray-900"
+                    @click="navbar = !navbar"
+                  >
+                    <!-- Heroicon name: outline/cursor-click -->
+                    <!--                    <svg-->
+                    <!--                      class="flex-shrink-0 h-6 w-6 text-indigo-600"-->
+                    <!--                      xmlns="http://www.w3.org/2000/svg"-->
+                    <!--                      fill="none"-->
+                    <!--                      viewBox="0 0 24 24"-->
+                    <!--                      stroke="currentColor"-->
+                    <!--                      aria-hidden="true"-->
+                    <!--                    >-->
+                    <!--                      <path-->
+                    <!--                        stroke-linecap="round"-->
+                    <!--                        stroke-linejoin="round"-->
+                    <!--                        stroke-width="2"-->
+                    <!--                        d="M15 15l-2 5L9 9l11 4-5 2zm0 0l5 5M7.188 2.239l.777 2.897M5.136 7.965l-2.898-.777M13.95 4.05l-2.122 2.122m-5.657 5.656l-2.12 2.122"-->
+                    <!--                      />-->
+                    <!--                    </svg>-->
+                    <span class="ml-3 text-base font-medium text-gray-200">
+                      About
+                    </span>
+                  </a>
+
+                  <a
+                    href="#stake"
+                    class="-m-3 p-3 flex items-center rounded-md hover:bg-gray-900"
+                    @click="navbar = !navbar"
+                  >
+                    <!-- Heroicon name: outline/shield-check -->
+                    <!--                    <svg-->
+                    <!--                      class="flex-shrink-0 h-6 w-6 text-indigo-600"-->
+                    <!--                      xmlns="http://www.w3.org/2000/svg"-->
+                    <!--                      fill="none"-->
+                    <!--                      viewBox="0 0 24 24"-->
+                    <!--                      stroke="currentColor"-->
+                    <!--                      aria-hidden="true"-->
+                    <!--                    >-->
+                    <!--                      <path-->
+                    <!--                        stroke-linecap="round"-->
+                    <!--                        stroke-linejoin="round"-->
+                    <!--                        stroke-width="2"-->
+                    <!--                        d="M9 12l2 2 4-4m5.618-4.016A11.955 11.955 0 0112 2.944a11.955 11.955 0 01-8.618 3.04A12.02 12.02 0 003 9c0 5.591 3.824 10.29 9 11.622 5.176-1.332 9-6.03 9-11.622 0-1.042-.133-2.052-.382-3.016z"-->
+                    <!--                      />-->
+                    <!--                    </svg>-->
+                    <span class="ml-3 text-base font-medium text-gray-200">
+                      Stake
+                    </span>
+                  </a>
+
+                  <a
+                    href="#contact"
+                    class="-m-3 p-3 flex items-center rounded-md hover:bg-gray-900"
+                    @click="navbar = !navbar"
+                  >
+                    <!-- Heroicon name: outline/view-grid -->
+                    <!--                    <svg-->
+                    <!--                      class="flex-shrink-0 h-6 w-6 text-indigo-600"-->
+                    <!--                      xmlns="http://www.w3.org/2000/svg"-->
+                    <!--                      fill="none"-->
+                    <!--                      viewBox="0 0 24 24"-->
+                    <!--                      stroke="currentColor"-->
+                    <!--                      aria-hidden="true"-->
+                    <!--                    >-->
+                    <!--                      <path-->
+                    <!--                        stroke-linecap="round"-->
+                    <!--                        stroke-linejoin="round"-->
+                    <!--                        stroke-width="2"-->
+                    <!--                        d="M4 6a2 2 0 012-2h2a2 2 0 012 2v2a2 2 0 01-2 2H6a2 2 0 01-2-2V6zM14 6a2 2 0 012-2h2a2 2 0 012 2v2a2 2 0 01-2 2h-2a2 2 0 01-2-2V6zM4 16a2 2 0 012-2h2a2 2 0 012 2v2a2 2 0 01-2 2H6a2 2 0 01-2-2v-2zM14 16a2 2 0 012-2h2a2 2 0 012 2v2a2 2 0 01-2 2h-2a2 2 0 01-2-2v-2z"-->
+                    <!--                      />-->
+                    <!--                    </svg>-->
+                    <span class="ml-3 text-base font-medium text-gray-200">
+                      Contact
+                    </span>
+                  </a>
+                </nav>
+              </div>
+            </div>
+          </div>
+        </div>
+      </transition>
     </header>
     <section id="top" class="relative w-full scroll-art">
       <img
@@ -182,11 +355,12 @@
     </footer>
     <a
       href="#top"
-      class="fixed bg-white rounded-full p-4 right-16 bottom-16 z-50"
-    ><img
-      class="h-8 w-8"
-      src="/images/keyboard_arrow_up_black_24dp.svg"
-    ></a>
+      class="fixed bg-white rounded-lg p-2 right-8 md:right-16 bottom-16 z-50"
+    >
+      <img
+        class="h-8 w-8"
+        src="/images/keyboard_arrow_up_black_24dp.svg"
+      ></a>
   </div>
 </template>
 
@@ -194,6 +368,11 @@
 import Vue from 'vue'
 
 export default Vue.extend({
+  data () {
+    return {
+      navbar: false
+    }
+  },
   head: {
     title: 'Cardano in Africa | Home'
   },

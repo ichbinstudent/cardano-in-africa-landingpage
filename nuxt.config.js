@@ -9,7 +9,7 @@ export default {
 
   // Global page headers: https://go.nuxtjs.dev/config-head
   head: {
-    title: 'cardano-in-africa-landingpage',
+    title: 'Cardano in Africa',
     htmlAttrs: {
       lang: 'en'
     },

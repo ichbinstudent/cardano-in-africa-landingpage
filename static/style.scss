@@ -54,7 +54,7 @@ section {
         left: auto;
         top: auto;
         right: 0;
-        bottom: 0vh;
+        bottom: 0;
         height: 80vh;
         width: auto;
         overflow: hidden;
@@ -108,9 +108,10 @@ section {
       top: 0;
       left: 0;
       width: 100%;
-      height: 300px;
+      height: 200px;
       background: linear-gradient(to top, #1c0522, black);
       z-index: 10;
+      overflow: hidden;
     }
   }
 
