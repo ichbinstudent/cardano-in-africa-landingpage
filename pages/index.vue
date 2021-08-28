@@ -7,6 +7,7 @@
         left-0
         px-0
         md:px-32
+        lg:px-64
         py-12
         flex
         text-xl
@@ -16,52 +17,61 @@
         z-50
       "
     >
-      <a href="#top" class="logo mx-auto">C I A</a>
+      <a href="#top" class="logo mx-auto md:m-0">C I A</a>
       <ul
         class="list-none content-center items-center text-white hidden md:flex"
       >
         <li class="mx-2">
-          <nuxt-link to="#top" class="rounded-lg p-2"> Home </nuxt-link>
+          <nuxt-link to="#top" class="rounded-lg p-2">
+            Home
+          </nuxt-link>
         </li>
         <li class="mx-2">
-          <nuxt-link to="#about" class="rounded-lg p-2">About</nuxt-link>
+          <nuxt-link to="#about" class="rounded-lg p-2">
+            About
+          </nuxt-link>
         </li>
         <li class="mx-2">
-          <nuxt-link to="#stake" class="rounded-lg p-2">Stake</nuxt-link>
+          <nuxt-link to="#stake" class="rounded-lg p-2">
+            Stake
+          </nuxt-link>
         </li>
         <li class="mx-2">
-          <nuxt-link to="#contact" class="rounded-lg p-2">Contact</nuxt-link>
+          <nuxt-link to="#contact" class="rounded-lg p-2">
+            Contact
+          </nuxt-link>
         </li>
       </ul>
     </header>
-    <section class="relative w-full scroll-art" id="top">
+    <section id="top" class="relative w-full scroll-art">
       <img
+        id="elephants"
         class="z-10 top-auto"
         src="/images/background/elephants.png"
-        id="elephants"
-      />
+      >
       <img
+        id="moon"
         class="fixed mx-auto z-0"
         src="/images/background/moon.svg"
-        id="moon"
-      />
-      <img class="z-0" src="/images/background/stars.svg" id="stars" />
+      >
+      <img id="stars" class="z-0" src="/images/background/stars.svg">
       <img
+        id="floor3"
         class="mountain z-0 top-auto"
         src="/images/background/floor_3.png"
-        id="floor3"
-      />
+      >
       <img
+        id="floor2"
         class="mountain z-0 top-auto"
         src="/images/background/floor_2.png"
-        id="floor2"
-      />
+      >
       <img
+        id="floor"
         class="mountain top-auto"
         src="/images/background/floor.png"
-        id="floor"
-      />
+      >
       <a
+        id="details-btn"
         class="
           uppercase
           display-inline-block
@@ -72,13 +82,12 @@
           text-2xl
           z-20
         "
-        id="details-btn"
         href="#about"
       >
         About us
       </a>
     </section>
-    <section class="content" id="about">
+    <section id="about" class="content">
       <div class="pt-16 sm:pt-0">
         <h1 class="text-3xl sm:text-5xl text-white mb-3 uppercase">
           Cardano In Africa
@@ -92,9 +101,11 @@
         </p>
       </div>
     </section>
-    <section class="z-10 content" id="stake">
+    <section id="stake" class="z-10 content">
       <div class="text-gray-200 flex flex-col w-full md:max-w-5xl">
-        <h2 class="text-5xl text-white mb-3">Stake</h2>
+        <h2 class="text-5xl text-white mb-3">
+          Stake
+        </h2>
         <p class="">
           Join our cause to improve the education on blockchain and the adoption
           of Cardano in Africa. You can find more technical details on
@@ -103,10 +114,11 @@
             href="https://adapools.org/pool/9e4ecaff3dac5c4c754a96cad961b404b9eab497afe4357160bb21c7"
             target="_blank"
             rel="noopener"
-            >ADAPools</a
-          >
+          >ADAPools</a>
         </p>
-        <h4 class="text-2xl my-4">Pool Details</h4>
+        <h4 class="text-2xl my-4">
+          Pool Details
+        </h4>
 
         <div
           class="
@@ -117,29 +129,37 @@
             flex flex-col
           "
         >
-          <h5 class="underline">Ticker</h5>
+          <h5 class="underline">
+            Ticker
+          </h5>
           CIA
-          <h5 class="underline mt-1">Pool Name</h5>
+          <h5 class="underline mt-1">
+            Pool Name
+          </h5>
           Cardano in Africa
-          <h5 class="underline mt-1">Pool ID (click to copy)</h5>
+          <h5 class="underline mt-1">
+            Pool ID (click to copy)
+          </h5>
           <input
             type="text"
             class="overflow-ellipsis rounded-lg bg-gray-700 p-1 cursor-pointer"
-            @click="copyToClipboard"
             value="9e4ecaff3dac5c4c754a96cad961b404b9eab497afe4357160bb21c7"
             readonly
-          />
+            @click="copyToClipboard"
+          >
         </div>
       </div>
     </section>
-    <section class="z-10 content text-gray-200" id="contact">
+    <section id="contact" class="z-10 content text-gray-200">
       <div class="flex flex-col">
-        <h2 class="text-5xl text-white mb-3">Contact</h2>
+        <h2 class="text-5xl text-white mb-3">
+          Contact
+        </h2>
         <h4 class="text-xl my-4 overflow-ellipsis">
           You can send us an email at
           <a href="mailto:admin@cardanoin.africa">admin@cardanoin.africa</a>
         </h4>
-        <p class="text-gray-200"></p>
+        <p class="text-gray-200" />
       </div>
     </section>
     <footer>
@@ -163,57 +183,66 @@
     <a
       href="#top"
       class="fixed bg-white rounded-full p-4 right-16 bottom-16 z-50"
-      ><img class="h-8 w-8" src="/images/keyboard_arrow_up_black_24dp.svg"
-    /></a>
+    ><img
+      class="h-8 w-8"
+      src="/images/keyboard_arrow_up_black_24dp.svg"
+    ></a>
   </div>
 </template>
 
 <script lang="ts">
-import Vue from "vue";
+import Vue from 'vue'
 
 export default Vue.extend({
-  mounted() {
+  head: {
+    title: 'Cardano in Africa | Home'
+  },
+  mounted () {
     if (
-      ["#top", "#about", "#stake", "#contact"].indexOf(
-        window.location.href.split("/").slice(-1)[0]
-      ) < 0
+      !['#top', '#about', '#stake', '#contact'].includes(window.location.href.split('/').slice(-1)[0])
     ) {
-      window.location.href = "#top";
+      window.location.href = '#top'
     }
 
-    let stars = window.document.getElementById("stars");
-    let moon = window.document.getElementById("moon");
-    let floor = window.document.getElementById("floor");
-    let floor2 = window.document.getElementById("floor2");
-    let floor3 = window.document.getElementById("floor3");
-    let elephants = window.document.getElementById("elephants");
-    let btn = window.document.getElementById("details-btn");
-    let header = window.document.getElementsByTagName("header");
+    const stars = window.document.getElementById('stars')
+    const moon = window.document.getElementById('moon')
+    // const floor = window.document.getElementById('floor')
+    const floor2 = window.document.getElementById('floor2')
+    const floor3 = window.document.getElementById('floor3')
+    const elephants = window.document.getElementById('elephants')
+    // const btn = window.document.getElementById('details-btn')
+    const header = window.document.getElementsByTagName('header')
 
-    window.addEventListener("scroll", () => {
-      let value = window.scrollY;
+    window.addEventListener('scroll', () => {
+      const value = window.scrollY
       if (value < 1100) {
-        header[0].style.background = "transparent";
+        header[0].style.background = 'transparent'
 
-        if (stars) stars.style.left = value * 0.25 + "px";
-
-        if (floor3 && floor2) {
-          floor3.style.bottom = -60 + value * -0.2 + "px";
-          floor2.style.bottom = -80 + value * -0.1 + "px";
+        if (stars) {
+          stars.style.left = value * 0.25 + 'px'
         }
 
-        if (elephants) elephants.style.right = value * -0.12 + "px";
-        if (moon) moon.style.opacity = (1 - value * 0.002).toString();
+        if (floor3 && floor2) {
+          floor3.style.bottom = -60 + value * -0.2 + 'px'
+          floor2.style.bottom = -80 + value * -0.1 + 'px'
+        }
+
+        if (elephants) {
+          elephants.style.right = value * -0.12 + 'px'
+        }
+        if (moon) {
+          moon.style.opacity = (1 - value * 0.002).toString()
+        }
       } else {
-        header[0].style.background = "#1c0522";
+        header[0].style.background = '#1c0522'
       }
-    });
+    })
   },
   methods: {
-    copyToClipboard(event: any) {
-      event.target.select();
-      document.execCommand("copy");
-    },
-  },
-});
+    copyToClipboard (event: any) {
+      event.target.select()
+      document.execCommand('copy')
+    }
+  }
+})
 </script>
