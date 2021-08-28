@@ -56,7 +56,8 @@ export default {
     '@nuxt/typescript-build',
     // https://go.nuxtjs.dev/tailwindcss
     '@nuxtjs/tailwindcss',
-    '@nuxtjs/pwa'
+    '@nuxtjs/pwa',
+    '@nuxtjs/google-analytics'
   ],
 
   // Modules: https://go.nuxtjs.dev/config-modules
@@ -66,6 +67,10 @@ export default {
     // https://go.nuxtjs.dev/content
     '@nuxt/content'
   ],
+
+  googleAnalytics: {
+    id: 'G-Q13THZLWLY'
+  },
 
   // Axios module configuration: https://go.nuxtjs.dev/config-axios
   axios: {},
