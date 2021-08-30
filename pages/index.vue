@@ -13,7 +13,9 @@
       "
     >
       <div class="max-w-7xl w-full mx-auto flex justify-between items-center px-4 md:px-16">
-        <div class="logo md:m-0 cursor-pointer" @click="scrollIntoView('#home')">C I A</div>
+        <div class="logo md:m-0 cursor-pointer" @click="scrollIntoView('#home')">
+          C I A
+        </div>
         <ul
           class="list-none content-center items-center text-white hidden md:flex"
         >
@@ -56,7 +58,7 @@
             stroke="currentColor"
             aria-hidden="true"
           >
-            <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M4 6h16M4 12h16M4 18h16"/>
+            <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M4 6h16M4 12h16M4 18h16" />
           </svg>
         </button>
       </div>
@@ -85,7 +87,7 @@
           >
             <div class="pt-6 pb-6 px-5">
               <div class="flex items-center justify-between">
-                <div/>
+                <div />
                 <div class="-mr-3 ">
                   <button
                     type="button"
@@ -102,7 +104,7 @@
                       stroke="currentColor"
                       aria-hidden="true"
                     >
-                      <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M6 18L18 6M6 6l12 12"/>
+                      <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M6 18L18 6M6 6l12 12" />
                     </svg>
                   </button>
                 </div>
@@ -334,7 +336,7 @@
         <h4 class="text-xl my-4 overflow-ellipsis">
           If you have any questions or want to join our team, feel free to send us an email at <a href="mailto:admin@cardanoin.africa">admin@cardanoin.africa</a>
         </h4>
-        <p class="text-gray-200"/>
+        <p class="text-gray-200" />
       </div>
     </section>
     <footer>
@@ -356,13 +358,14 @@
       </div>
     </footer>
     <div
-      @click="scrollToTop"
       class="fixed bg-white rounded-lg p-2 right-8 md:right-16 bottom-16 z-50 cursor-pointer"
+      @click="scrollToTop"
     >
       <img
         class="h-8 w-8"
         src="/images/keyboard_arrow_up_black_24dp.svg"
-      ></div>
+      >
+    </div>
   </div>
 </template>
 

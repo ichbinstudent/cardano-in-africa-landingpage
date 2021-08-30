@@ -60,16 +60,23 @@ export default {
     // https://go.nuxtjs.dev/tailwindcss
     '@nuxtjs/tailwindcss',
     '@nuxtjs/pwa',
-    '@nuxtjs/google-analytics',
-    // https://go.nuxtjs.dev/axios
-    '@nuxtjs/axios',
-    // https://go.nuxtjs.dev/content
-    '@nuxt/content'
+    '@nuxtjs/google-analytics'
   ],
 
   // Modules: https://go.nuxtjs.dev/config-modules
   modules: [
+    // https://go.nuxtjs.dev/axios
+    '@nuxtjs/axios',
+    // https://go.nuxtjs.dev/content
+    '@nuxt/content',
+    '@nuxtjs/sentry'
   ],
+
+  sentry: {
+    dsn: 'https://cb55688d41164198a828fa14777afdfe@o982101.ingest.sentry.io/5936850', // Enter your project's DSN here
+    config: {
+    }
+  },
 
   googleAnalytics: {
     id: 'G-Q13THZLWLY'
