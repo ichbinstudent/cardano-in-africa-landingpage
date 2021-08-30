@@ -29,9 +29,6 @@ export default {
         content: 'telephone=no'
       }
     ],
-    // link: [
-    //   { rel: 'icon', type: 'image/x-icon', href: '/favicon.ico' }
-    // ]
     script: [
       {
         src: 'https://raw.githack.com/CristianDavideConte/universalSmoothScroll/master/js/universalsmoothscroll-min.js'
@@ -49,7 +46,9 @@ export default {
   ],
 
   // Plugins to run before rendering page: https://go.nuxtjs.dev/config-plugins
-  plugins: [],
+  plugins: [
+    '~/plugins/smooth-scroll.client.js'
+  ],
 
   // Auto import components: https://go.nuxtjs.dev/config-components
   components: true,
@@ -61,15 +60,15 @@ export default {
     // https://go.nuxtjs.dev/tailwindcss
     '@nuxtjs/tailwindcss',
     '@nuxtjs/pwa',
-    '@nuxtjs/google-analytics'
-  ],
-
-  // Modules: https://go.nuxtjs.dev/config-modules
-  modules: [
+    '@nuxtjs/google-analytics',
     // https://go.nuxtjs.dev/axios
     '@nuxtjs/axios',
     // https://go.nuxtjs.dev/content
     '@nuxt/content'
+  ],
+
+  // Modules: https://go.nuxtjs.dev/config-modules
+  modules: [
   ],
 
   googleAnalytics: {
