@@ -15,17 +15,11 @@
   "private": true,
   "dependencies": {
     "@nuxt/content": "^1.14.0",
-    "@nuxtjs/axios": "^5.13.6",
-    "@nuxt/core": "^2.15.8"
+    "@nuxt/core": "^2.15.8",
+    "@nuxtjs/axios": "^5.13.6"
   },
   "devDependencies": {
     "@babel/eslint-parser": "^7.14.7",
-    "@layer0/cli": "^3.16.5",
-    "@layer0/core": "^3.16.5",
-    "@layer0/devtools": "^3.16.5",
-    "@layer0/nuxt": "^3.16.5",
-    "@layer0/prefetch": "^3.16.5",
-    "@layer0/vue": "^3.16.5",
     "@nuxt/types": "^2.15.7",
     "@nuxt/typescript-build": "^2.1.0",
     "@nuxtjs/eslint-config-typescript": "^6.0.1",
@@ -33,7 +27,9 @@
     "@nuxtjs/google-analytics": "^2.4.0",
     "@nuxtjs/pwa": "^3.3.5",
     "@nuxtjs/tailwindcss": "^4.2.0",
+    "@nuxtjs/vercel-builder": "^0.21.3",
     "@types/smoothscroll-polyfill": "^0.3.1",
+    "core-js": "^3.15.1",
     "eslint": "^7.29.0",
     "eslint-plugin-nuxt": "^2.0.0",
     "eslint-plugin-vue": "^7.12.1",
@@ -43,7 +39,6 @@
     "sass": "^1.38.1",
     "sass-loader": "10",
     "smoothscroll-polyfill": "^0.4.4",
-    "tailwindcss": "^2.2.8",
-    "core-js": "^3.15.1"
+    "tailwindcss": "^2.2.8"
   }
 }
