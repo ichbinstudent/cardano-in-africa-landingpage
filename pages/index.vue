@@ -385,7 +385,7 @@ export default Vue.extend({
     title: 'Cardano in Africa | Home'
   },
   mounted () {
-    window.setInterval(() => this.scrollUpdate = true, 33)
+    window.setInterval(function () { this.scrollUpdate = true }, 33)
 
     const stars = window.document.getElementById('stars')
     const moon = window.document.getElementById('moon')
