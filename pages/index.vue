@@ -58,7 +58,7 @@
             stroke="currentColor"
             aria-hidden="true"
           >
-            <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M4 6h16M4 12h16M4 18h16" />
+            <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M4 6h16M4 12h16M4 18h16"/>
           </svg>
         </button>
       </div>
@@ -87,7 +87,7 @@
           >
             <div class="pt-6 pb-6 px-5">
               <div class="flex items-center justify-between">
-                <div />
+                <div/>
                 <div class="-mr-3 ">
                   <button
                     type="button"
@@ -104,7 +104,7 @@
                       stroke="currentColor"
                       aria-hidden="true"
                     >
-                      <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M6 18L18 6M6 6l12 12" />
+                      <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M6 18L18 6M6 6l12 12"/>
                     </svg>
                   </button>
                 </div>
@@ -334,9 +334,11 @@
           Contact
         </h2>
         <h4 class="text-xl my-4 overflow-ellipsis">
-          If you have any questions or want to join our team, feel free to send us an email at <a href="mailto:admin@cardanoin.africa">admin@cardanoin.africa</a>
+          If you have any questions or want to join our team, feel free to send us an email at <a
+          href="mailto:admin@cardanoin.africa"
+        >admin@cardanoin.africa</a>
         </h4>
-        <p class="text-gray-200" />
+        <p class="text-gray-200"/>
       </div>
     </section>
     <footer>
@@ -375,13 +377,16 @@ import Vue from 'vue'
 export default Vue.extend({
   data () {
     return {
-      navbar: false
+      navbar: false,
+      scrollUpdate: true
     }
   },
   head: {
     title: 'Cardano in Africa | Home'
   },
   mounted () {
+    window.setInterval(() => this.scrollUpdate = true, 33)
+
     const stars = window.document.getElementById('stars')
     const moon = window.document.getElementById('moon')
     // const floor = window.document.getElementById('floor')
@@ -392,13 +397,21 @@ export default Vue.extend({
     const header = window.document.getElementsByTagName('header')
 
     window.addEventListener('scroll', () => {
+      if (!this.scrollUpdate) {
+        return
+      }
+
       ['home', 'about', 'stake', 'contact'].forEach((selector) => {
         const element = document.querySelector('#' + selector)
-        const navbar = document.querySelector('.navbar-' + selector)
+        const navbar = document.getElementsByClassName('navbar-' + selector)
         if (this.isInViewport(element)) {
-          navbar?.classList.add('nuxt-link-active')
+          for (let i = 0, len = navbar.length | 0; i < len; i = i + 1 | 0) {
+            navbar[i].classList.add('nuxt-link-active')
+          }
         } else {
-          navbar?.classList.remove('nuxt-link-active')
+          for (let i = 0, len = navbar.length | 0; i < len; i = i + 1 | 0) {
+            navbar[i].classList.remove('nuxt-link-active')
+          }
         }
       })
 
@@ -424,6 +437,8 @@ export default Vue.extend({
       } else {
         header[0].style.background = '#1c0522'
       }
+
+      this.scrollUpdate = false
     })
   },
   methods: {
