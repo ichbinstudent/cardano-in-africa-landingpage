@@ -1,3 +1,5 @@
+import { Integrations } from '@sentry/tracing'
+
 export default {
   // Disable server-side rendering: https://go.nuxtjs.dev/ssr-mode
   ssr: true,
@@ -75,6 +77,8 @@ export default {
   sentry: {
     dsn: 'https://cb55688d41164198a828fa14777afdfe@o982101.ingest.sentry.io/5936850', // Enter your project's DSN here
     config: {
+      integrations: [new Integrations.BrowserTracing()],
+      tracesSampleRate: 0.2
     }
   },
 
