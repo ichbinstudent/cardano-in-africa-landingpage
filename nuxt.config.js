@@ -62,7 +62,6 @@ export default {
     // https://go.nuxtjs.dev/tailwindcss
     '@nuxtjs/tailwindcss',
     '@nuxtjs/pwa',
-    '@nuxt/image',
     '@nuxtjs/google-analytics',
     '@nuxt-hero-icons/outline/nuxt'
   ],
@@ -73,7 +72,8 @@ export default {
     '@nuxtjs/axios',
     // https://go.nuxtjs.dev/content
     '@nuxt/content',
-    '@nuxtjs/sentry'
+    '@nuxtjs/sentry',
+    '@nuxt/image'
   ],
 
   sentry: {
