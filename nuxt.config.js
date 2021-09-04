@@ -5,7 +5,7 @@ export default {
   ssr: true,
 
   // Target: https://go.nuxtjs.dev/config-target
-  target: 'server',
+  target: 'static',
 
   staticDir: './static',
 
@@ -91,7 +91,9 @@ export default {
   axios: {},
 
   // Content module configuration: https://go.nuxtjs.dev/config-content
-  content: {},
+  content: {
+
+  },
 
   // Build Configuration: https://go.nuxtjs.dev/config-build
   build: {},
