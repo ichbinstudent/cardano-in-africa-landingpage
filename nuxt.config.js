@@ -98,6 +98,10 @@ export default {
   // Build Configuration: https://go.nuxtjs.dev/config-build
   build: {},
 
+  sitemap: {
+    hostname: 'https://cardanoin.africa'
+  },
+
   image: {
     screens: {
       xs: 320,

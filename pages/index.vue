@@ -447,7 +447,9 @@ export default Vue.extend({
 
       const value = window.scrollY
       if (value < 950) {
-        header[0].style.background = 'transparent'
+        if (header.length > 0) {
+          header[0].style.background = 'transparent'
+        }
 
         if (stars) {
           stars.style.left = value * 0.25 + 'px'
