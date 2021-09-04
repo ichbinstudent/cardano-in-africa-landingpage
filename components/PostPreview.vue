@@ -1,10 +1,9 @@
 <template>
   <li class="transition-all duration-500 ease-in-out">
     <nuxt-link :to="{name: 'tutorials-slug', params: { slug: post.slug }}">
-      <nuxt-img
+      <img
         class="rounded-lg"
         :src="'/images/content/previews/' + post.image"
-        preset="preview"
         width="400"
         height="300"
       />
