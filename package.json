@@ -22,15 +22,13 @@
   },
   "devDependencies": {
     "@babel/eslint-parser": "^7.14.7",
-    "@nuxt-hero-icons/outline": "^1.0.1",
-    "@nuxt/image": "^0.5.0",
-    "@nuxt/types": "^2.15.8",
+    "@nuxt/types": "^2.15.7",
     "@nuxt/typescript-build": "^2.1.0",
     "@nuxtjs/eslint-config-typescript": "^6.0.1",
     "@nuxtjs/eslint-module": "^3.0.2",
     "@nuxtjs/google-analytics": "^2.4.0",
     "@nuxtjs/pwa": "^3.3.5",
-    "@nuxtjs/tailwindcss": "^4.2.1",
+    "@nuxtjs/tailwindcss": "^4.2.0",
     "@nuxtjs/vercel-builder": "^0.21.3",
     "@tailwindcss/typography": "^0.4.1",
     "@types/smoothscroll-polyfill": "^0.3.1",
@@ -44,6 +42,6 @@
     "sass": "^1.38.1",
     "sass-loader": "10",
     "smoothscroll-polyfill": "^0.4.4",
-    "tailwindcss": "^2.2.9"
+    "tailwindcss": "^2.2.8"
   }
 }
