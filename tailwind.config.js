@@ -1,7 +1,13 @@
 const colors = require('tailwindcss/colors')
 
 module.exports = {
-  purge: [],
+  purge: [
+    './components/**/*.{vue,js}',
+    './layouts/**/*.vue',
+    './pages/**/*.vue',
+    './plugins/**/*.{js,ts}',
+    './nuxt.config.{js,ts}'
+  ],
   darkMode: false, // or 'media' or 'class'
   theme: {
     colors: {
@@ -11,7 +17,7 @@ module.exports = {
         dark: '#1a041f',
         DEFAULT: '#1c0522',
         light: '#24072c',
-        lightest: '#390b46',
+        lightest: '#390b46'
       }
     },
     extend: {
@@ -21,5 +27,5 @@ module.exports = {
   variants: {
     extend: {}
   },
-  plugins: []
+  plugins: [require('@tailwindcss/typography')]
 }

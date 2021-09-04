@@ -42,6 +42,11 @@
               Contact
             </div>
           </li>
+          <li class="mx-2">
+            <nuxt-link class="rounded-lg p-2 inline-flex align-middle" :to="'tutorials'">
+              Tutorials <outline-external-link-icon class="ml-1 h-4 w-4 my-auto" />
+            </nuxt-link>
+          </li>
         </ul>
         <button
           type="button"
@@ -58,7 +63,7 @@
             stroke="currentColor"
             aria-hidden="true"
           >
-            <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M4 6h16M4 12h16M4 18h16"/>
+            <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M4 6h16M4 12h16M4 18h16" />
           </svg>
         </button>
       </div>
@@ -87,7 +92,7 @@
           >
             <div class="pt-6 pb-6 px-5">
               <div class="flex items-center justify-between">
-                <div/>
+                <div />
                 <div class="-mr-3 ">
                   <button
                     type="button"
@@ -104,7 +109,7 @@
                       stroke="currentColor"
                       aria-hidden="true"
                     >
-                      <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M6 18L18 6M6 6l12 12"/>
+                      <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M6 18L18 6M6 6l12 12" />
                     </svg>
                   </button>
                 </div>
@@ -112,7 +117,7 @@
               <div class="mt-6">
                 <nav class="grid gap-y-8">
                   <div
-                    class="navbar-home nuxt-link-active -m-3 p-3 flex items-center rounded-md"
+                    class="navbar-home -m-3 p-3 flex items-center rounded-md cursor-pointer"
                     @click="() => {navbar = !navbar; scrollToTop()}"
                   >
                     <!-- Heroicon name: outline/chart-bar -->
@@ -137,7 +142,7 @@
                   </div>
 
                   <div
-                    class="navbar-about -m-3 p-3 flex items-center rounded-md"
+                    class="navbar-about -m-3 p-3 flex items-center rounded-md cursor-pointer"
                     @click="() => {navbar = !navbar; scrollIntoView('#about')}"
                   >
                     <!-- Heroicon name: outline/cursor-click -->
@@ -162,7 +167,7 @@
                   </div>
 
                   <div
-                    class="navbar-stake -m-3 p-3 flex items-center rounded-md"
+                    class="navbar-stake -m-3 p-3 flex items-center rounded-md cursor-pointer"
                     @click="() => {navbar = !navbar; scrollIntoView('#stake')}"
                   >
                     <!-- Heroicon name: outline/shield-check -->
@@ -187,7 +192,7 @@
                   </div>
 
                   <div
-                    class="navbar-contact -m-3 p-3 flex items-center rounded-md"
+                    class="navbar-contact -m-3 p-3 flex items-center rounded-md cursor-pointer"
                     @click="() => {navbar = !navbar; scrollIntoView('#contact')}"
                   >
                     <!-- Heroicon name: outline/view-grid -->
@@ -210,6 +215,31 @@
                       Contact
                     </span>
                   </div>
+
+                  <nuxt-link
+                    class="-m-3 p-3 flex items-center rounded-md cursor-pointer"
+                    :to="'tutorials'"
+                  >
+                    <!-- Heroicon name: outline/view-grid -->
+                    <!--                    <svg-->
+                    <!--                      class="flex-shrink-0 h-6 w-6 text-indigo-600"-->
+                    <!--                      xmlns="http://www.w3.org/2000/svg"-->
+                    <!--                      fill="none"-->
+                    <!--                      viewBox="0 0 24 24"-->
+                    <!--                      stroke="currentColor"-->
+                    <!--                      aria-hidden="true"-->
+                    <!--                    >-->
+                    <!--                      <path-->
+                    <!--                        stroke-linecap="round"-->
+                    <!--                        stroke-linejoin="round"-->
+                    <!--                        stroke-width="2"-->
+                    <!--                        d="M4 6a2 2 0 012-2h2a2 2 0 012 2v2a2 2 0 01-2 2H6a2 2 0 01-2-2V6zM14 6a2 2 0 012-2h2a2 2 0 012 2v2a2 2 0 01-2 2h-2a2 2 0 01-2-2V6zM4 16a2 2 0 012-2h2a2 2 0 012 2v2a2 2 0 01-2 2H6a2 2 0 01-2-2v-2zM14 16a2 2 0 012-2h2a2 2 0 012 2v2a2 2 0 01-2 2h-2a2 2 0 01-2-2v-2z"-->
+                    <!--                      />-->
+                    <!--                    </svg>-->
+                    <span class="ml-3 text-base font-medium text-gray-200 flex">
+                      Tutorials <outline-external-link-icon class="ml-1 h-4 w-4 my-auto" />
+                    </span>
+                  </nuxt-link>
                 </nav>
               </div>
             </div>
@@ -263,7 +293,7 @@
       </div>
     </section>
     <section id="about" class="content">
-      <div class="pt-16 sm:pt-0">
+      <div class="pt-32 sm:pt-16 md:pt-0">
         <h1 class="text-3xl sm:text-5xl text-white mb-3 uppercase">
           Cardano In Africa
         </h1>
@@ -335,10 +365,10 @@
         </h2>
         <h4 class="text-xl my-4 overflow-ellipsis">
           If you have any questions or want to join our team, feel free to send us an email at <a
-          href="mailto:admin@cardanoin.africa"
-        >admin@cardanoin.africa</a>
+            href="mailto:admin@cardanoin.africa"
+          >admin@cardanoin.africa</a>
         </h4>
-        <p class="text-gray-200"/>
+        <p class="text-gray-200" />
       </div>
     </section>
     <footer>
@@ -382,7 +412,7 @@ export default Vue.extend({
     }
   },
   head: {
-    title: 'Cardano in Africa | Home'
+    title: 'Home'
   },
   mounted () {
     window.setInterval(() => { this.scrollUpdate = true }, 33)

@@ -11,7 +11,7 @@ export default {
 
   // Global page headers: https://go.nuxtjs.dev/config-head
   head: {
-    title: 'Cardano in Africa',
+    titleTemplate: '%s | Cardano in Africa',
     htmlAttrs: {
       lang: 'en'
     },
@@ -62,7 +62,9 @@ export default {
     // https://go.nuxtjs.dev/tailwindcss
     '@nuxtjs/tailwindcss',
     '@nuxtjs/pwa',
-    '@nuxtjs/google-analytics'
+    '@nuxt/image',
+    '@nuxtjs/google-analytics',
+    '@nuxt-hero-icons/outline/nuxt'
   ],
 
   // Modules: https://go.nuxtjs.dev/config-modules
@@ -93,5 +95,27 @@ export default {
   content: {},
 
   // Build Configuration: https://go.nuxtjs.dev/config-build
-  build: {}
+  build: {},
+
+  image: {
+    screens: {
+      xs: 320,
+      sm: 640,
+      md: 768,
+      lg: 1024,
+      xl: 1280,
+      xxl: 1536,
+      '2xl': 1536
+    },
+    presets: {
+      preview: {
+        modifiers: {
+          fit: 'contain',
+          format: 'png',
+          width: 400,
+          height: 300
+        }
+      }
+    }
+  }
 }

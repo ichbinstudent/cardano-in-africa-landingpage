@@ -20,7 +20,7 @@ header .logo {
   letter-spacing: 2px;
 }
 
-header ul li div {
+header ul li div, header ul li a {
   &:hover, &.nuxt-link-active {
     background: white;
     color: #2b1055;
@@ -29,7 +29,8 @@ header ul li div {
   transition-duration: 0.3s;
 }
 
-header nav div {
+header nav div,
+header nav a {
   &.nuxt-link-active{
     background: #ffffff10;
   }
