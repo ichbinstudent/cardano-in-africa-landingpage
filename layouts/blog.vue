@@ -20,6 +20,9 @@
 import Vue from 'vue'
 
 export default Vue.extend({
+  head: {
+    title: 'Tutorials'
+  },
   methods: {
     scrollToTop () {
       window.scroll({
