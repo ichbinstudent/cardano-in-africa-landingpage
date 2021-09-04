@@ -63,7 +63,7 @@ export default {
     '@nuxtjs/tailwindcss',
     '@nuxtjs/pwa',
     '@nuxtjs/google-analytics',
-    // '@nuxt-hero-icons/outline/nuxt'
+    '@nuxt-hero-icons/outline/nuxt'
   ],
 
   // Modules: https://go.nuxtjs.dev/config-modules
