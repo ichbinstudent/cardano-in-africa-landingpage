@@ -44,7 +44,8 @@
           </li>
           <li class="mx-2">
             <nuxt-link class="rounded-lg p-2 inline-flex align-middle" :to="'tutorials'">
-              Tutorials <outline-external-link-icon class="ml-1 h-4 w-4 my-auto" />
+              Tutorials
+              <outline-external-link-icon class="ml-1 h-4 w-4 my-auto" />
             </nuxt-link>
           </li>
         </ul>
@@ -301,9 +302,10 @@
           Welcome to the unofficial stake pool for Cardano in Africa!
         </h4>
         <p class="text-gray-200">
-          We're a stakepool for Cardano, and our goal is to spread the word about blockchain technology and the adoption
+          We're a stake pool for Cardano, and our goal is to spread the word about blockchain technology and the
+          adoption
           of it in Africa.<br><br>
-          Help us reach our mission by joining our stakepool today.
+          Help us reach our mission by joining our stake pool today.
         </p>
       </div>
     </section>
@@ -312,17 +314,26 @@
         <h2 class="text-5xl text-white mb-3">
           Stake
         </h2>
-        <p class="">
+        <p class="text-md">
           Join our cause to improve the education on blockchain and the adoption
           of Cardano in Africa. You can find more technical details on
           <a
-            class="underline"
+            class="underline inline-flex flex-nowrap"
             href="https://adapools.org/pool/9e4ecaff3dac5c4c754a96cad961b404b9eab497afe4357160bb21c7"
             target="_blank"
             rel="noopener"
-          >ADAPools</a>.<br><br>
-          The stakepool is reliably and securely hosted by professionals on powerful servers.
-          As stakepool operators we take our responsibility to maintain and secure the Cardano network very seriously.
+          >ADAPools<outline-external-link-icon class="ml-1 h-4 w-4 my-auto" /></a>.<br><br>
+          The stake pool is reliably and securely hosted by professionals on powerful servers.
+          As stake pool operators we take our responsibility to maintain and secure the Cardano network very
+          seriously.<br>
+          You can check the uptime of our services on our <a
+            target="_blank"
+            rel="noopener"
+            class="underline inline-flex flex-nowrap"
+            href="https://status.cardanoin.africa/"
+          >status page
+            <outline-external-link-icon class="ml-1 h-4 w-4 my-auto" />
+          </a>.
         </p>
         <h4 class="text-2xl my-4">
           Pool Details
@@ -415,7 +426,9 @@ export default Vue.extend({
     title: 'Home'
   },
   mounted () {
-    window.setInterval(() => { this.scrollUpdate = true }, 33)
+    window.setInterval(() => {
+      this.scrollUpdate = true
+    }, 33)
 
     const stars = window.document.getElementById('stars')
     const moon = window.document.getElementById('moon')
