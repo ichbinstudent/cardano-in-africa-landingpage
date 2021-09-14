@@ -24,7 +24,7 @@ export default {
       {
         hid: 'description',
         name: 'description',
-        content: 'Welcome to the homepage of the unofficial stakepool for Cardano in Africa.'
+        content: 'Welcome to the homepage of the unofficial stake pool for Cardano in Africa. Here you can find more information about us and take a look at our tutorials on Cardano.'
       },
       {
         name: 'format-detection',
