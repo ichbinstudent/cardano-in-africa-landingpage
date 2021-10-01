@@ -5,12 +5,13 @@
     </div>
 
     <div
-      class="fixed bg-white shadow-lg rounded-lg p-2 right-8 md:right-16 bottom-16 z-50 cursor-pointer"
+      class="fixed bg-white shadow-lg rounded-lg p-2 right-8 md:right-16 bottom-16 z-50 cursor-pointer hover:bg-gray-100"
       @click="scrollToTop"
     >
       <img
         class="h-8 w-8"
         src="/images/keyboard_arrow_up_black_24dp.svg"
+        alt="Arrow up icon"
       >
     </div>
   </div>

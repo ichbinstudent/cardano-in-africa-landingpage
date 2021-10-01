@@ -34,11 +34,11 @@ export default {
     script: [
       {
         src: 'https://raw.githack.com/CristianDavideConte/universalSmoothScroll/master/js/universalsmoothscroll-min.js'
-      },
-      {
-        src: 'https://spysession.clientpanel.co/pixel/nneE4iUluNqk1qvh',
-        defer: true
       }
+      // {
+      //   src: 'https://spysession.clientpanel.co/pixel/nneE4iUluNqk1qvh',
+      //   defer: true
+      // }
     ]
   },
 
@@ -73,7 +73,8 @@ export default {
     // https://go.nuxtjs.dev/content
     '@nuxt/content',
     '@nuxtjs/sentry',
-    '@nuxtjs/sitemap'
+    '@nuxtjs/sitemap',
+    '@nuxt/image'
   ],
 
   sentry: {
@@ -97,10 +98,9 @@ export default {
 
   // Build Configuration: https://go.nuxtjs.dev/config-build
   build: {
-    cache: true,
+    // cache: true,
     extractCSS: true,
-    optimizeCSS: true,
-    parallel: true
+    optimizeCSS: true
   },
 
   sitemap: {

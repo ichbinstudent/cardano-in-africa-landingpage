@@ -7,14 +7,14 @@
         left-0
         py-8
         flex
-        text-xl
+        text-lg lg:text-2xl
         w-full
         z-50
       "
     >
       <div class="max-w-7xl w-full mx-auto flex justify-between items-center px-4 md:px-16">
         <div class="logo md:m-0 cursor-pointer" @click="scrollIntoView('#home')">
-          C I A
+          <nuxt-img src="/icon_white.svg" width="60px" height="60px" style="color: white;" />
         </div>
         <ul
           class="list-none content-center items-center text-white hidden md:flex"
@@ -43,7 +43,13 @@
             </div>
           </li>
           <li class="mx-2">
-            <nuxt-link class="rounded-lg p-2 inline-flex align-middle" :to="'tutorials'">
+            <nuxt-link class="rounded-lg p-2 inline-flex align-middle underline" :to="'projects'">
+              Projects
+              <outline-external-link-icon class="ml-1 h-4 w-4 my-auto" />
+            </nuxt-link>
+          </li>
+          <li class="mx-2">
+            <nuxt-link class="rounded-lg p-2 inline-flex align-middle underline" :to="'tutorials'">
               Tutorials
               <outline-external-link-icon class="ml-1 h-4 w-4 my-auto" />
             </nuxt-link>
@@ -51,7 +57,7 @@
         </ul>
         <button
           type="button"
-          class="md:hidden rounded-md p-2 inline-flex items-center justify-center text-gray-200 hover:text-gray-500 hover:bg-gray-100 focus:outline-none focus:ring-2 focus:ring-inset focus:ring-indigo-500"
+          class="md:hidden rounded-md p-4 inline-flex items-center justify-center text-gray-200 hover:text-gray-500 hover:bg-gray-100 focus:outline-none focus:ring-2 focus:ring-inset focus:ring-indigo-500"
           @click="navbar = !navbar"
         >
           <span class="sr-only">Open menu</span>
@@ -73,20 +79,10 @@
         enter-active-class="duration-200 ease-out"
         enter-from-class="opacity-0 scale-95"
         enter-to-class="opacity-100 scale-100"
-        leave-active-class="duration-100 ease-in"
+        leave-active-class="duration-200 ease-in"
         leave-from-class="opacity-100 scale-100"
         leave-to-class="opacity-0 scale-95"
       >
-        <!--
-          Mobile menu, show/hide based on mobile menu state.
-
-          Entering: "duration-200 ease-out"
-            From: "opacity-0 scale-95"
-            To: "opacity-100 scale-100"
-          Leaving: "duration-100 ease-in"
-            From: "opacity-100 scale-100"
-            To: "opacity-0 scale-95"
-        -->
         <div v-show="navbar" class="absolute top-0 inset-x-0 p-2 transition transform origin-top-right md:hidden">
           <div
             class="rounded-lg shadow-lg ring-1 ring-black ring-opacity-5 bg-primary text-gray-200 divide-y-2 divide-gray-50"
@@ -97,7 +93,7 @@
                 <div class="-mr-3 ">
                   <button
                     type="button"
-                    class="rounded-md p-2 inline-flex items-center justify-center text-gray-200 hover:text-gray-500 hover:bg-gray-100 focus:outline-none focus:ring-2 focus:ring-inset focus:ring-indigo-500"
+                    class="rounded-md p-4 inline-flex items-center justify-center text-gray-200 hover:text-gray-500 hover:bg-gray-100 focus:outline-none focus:ring-2 focus:ring-inset focus:ring-indigo-500"
                     @click="navbar = !navbar"
                   >
                     <span class="sr-only">Close menu</span>
@@ -116,7 +112,7 @@
                 </div>
               </div>
               <div class="mt-6">
-                <nav class="grid gap-y-8">
+                <nav class="grid gap-y-8 text-right">
                   <div
                     class="navbar-home -m-3 p-3 flex items-center rounded-md cursor-pointer"
                     @click="() => {navbar = !navbar; scrollToTop()}"
@@ -219,7 +215,32 @@
 
                   <nuxt-link
                     class="-m-3 p-3 flex items-center rounded-md cursor-pointer"
-                    :to="'tutorials'"
+                    to="projects"
+                  >
+                    <!-- Heroicon name: outline/view-grid -->
+                    <!--                    <svg-->
+                    <!--                      class="flex-shrink-0 h-6 w-6 text-indigo-600"-->
+                    <!--                      xmlns="http://www.w3.org/2000/svg"-->
+                    <!--                      fill="none"-->
+                    <!--                      viewBox="0 0 24 24"-->
+                    <!--                      stroke="currentColor"-->
+                    <!--                      aria-hidden="true"-->
+                    <!--                    >-->
+                    <!--                      <path-->
+                    <!--                        stroke-linecap="round"-->
+                    <!--                        stroke-linejoin="round"-->
+                    <!--                        stroke-width="2"-->
+                    <!--                        d="M4 6a2 2 0 012-2h2a2 2 0 012 2v2a2 2 0 01-2 2H6a2 2 0 01-2-2V6zM14 6a2 2 0 012-2h2a2 2 0 012 2v2a2 2 0 01-2 2h-2a2 2 0 01-2-2V6zM4 16a2 2 0 012-2h2a2 2 0 012 2v2a2 2 0 01-2 2H6a2 2 0 01-2-2v-2zM14 16a2 2 0 012-2h2a2 2 0 012 2v2a2 2 0 01-2 2h-2a2 2 0 01-2-2v-2z"-->
+                    <!--                      />-->
+                    <!--                    </svg>-->
+                    <span class="ml-3 text-base font-medium text-gray-200 flex">
+                      Projects <outline-external-link-icon class="ml-1 h-4 w-4 my-auto" />
+                    </span>
+                  </nuxt-link>
+
+                  <nuxt-link
+                    class="-m-3 p-3 flex items-center rounded-md cursor-pointer"
+                    to="tutorials"
                   >
                     <!-- Heroicon name: outline/view-grid -->
                     <!--                    <svg-->
@@ -250,30 +271,29 @@
     </header>
     <section id="home" class="relative w-full scroll-art">
       <img
-        id="elephants"
-        class="z-10 top-auto"
-        src="/images/background/elephants.png"
-      >
-      <img
         id="moon"
         class="fixed mx-auto z-0"
         src="/images/background/moon.svg"
+        alt="Image of a moon"
       >
-      <img id="stars" class="z-0" src="/images/background/stars.svg">
+      <img id="stars" class="z-0" src="/images/background/stars.svg" alt="Background image of a night sky background">
       <img
         id="floor3"
         class="mountain z-0 top-auto"
         src="/images/background/floor_3.png"
+        alt="Distant contours of a mountain range"
       >
       <img
         id="floor2"
         class="mountain z-0 top-auto"
         src="/images/background/floor_2.png"
+        alt="Distant contours of a mountain range"
       >
       <img
         id="floor"
         class="mountain top-auto"
         src="/images/background/floor.png"
+        alt="The shadow of a tree and two elephants walking."
       >
       <div
         id="details-btn"
@@ -322,7 +342,9 @@
             href="https://adapools.org/pool/9e4ecaff3dac5c4c754a96cad961b404b9eab497afe4357160bb21c7"
             target="_blank"
             rel="noopener"
-          >ADAPools<outline-external-link-icon class="ml-1 h-4 w-4 my-auto" /></a>.<br><br>
+          >ADAPools
+            <outline-external-link-icon class="ml-1 h-4 w-4 my-auto" />
+          </a>.<br><br>
           The stake pool is reliably and securely hosted by professionals on powerful servers.
           As stake pool operators we take our responsibility to maintain and secure the Cardano network very
           seriously.<br>
@@ -395,18 +417,19 @@
         "
       >
         <p>
-          <a href="http://www.freepik.com">Illustrations designed by Freepik</a>
+          <a target="_blank" rel="nofollow noopener" href="https://www.freepik.com">Illustrations designed by Freepik</a>
           | Copyright by David Höglinger
         </p>
       </div>
     </footer>
     <div
-      class="fixed bg-white rounded-lg p-2 right-8 md:right-16 bottom-16 z-50 cursor-pointer"
+      class="fixed bg-white rounded-lg p-2 right-8 md:right-16 bottom-16 z-50 cursor-pointer hover:bg-purple-200"
       @click="scrollToTop"
     >
       <img
         class="h-8 w-8"
         src="/images/keyboard_arrow_up_black_24dp.svg"
+        alt="Arrow pointing upwards"
       >
     </div>
   </div>
@@ -432,10 +455,8 @@ export default Vue.extend({
 
     const stars = window.document.getElementById('stars')
     const moon = window.document.getElementById('moon')
-    // const floor = window.document.getElementById('floor')
     const floor2 = window.document.getElementById('floor2')
     const floor3 = window.document.getElementById('floor3')
-    const elephants = window.document.getElementById('elephants')
     // const btn = window.document.getElementById('details-btn')
     const header = window.document.getElementsByTagName('header')
 
@@ -473,9 +494,6 @@ export default Vue.extend({
           floor2.style.bottom = -80 + value * -0.1 + 'px'
         }
 
-        if (elephants) {
-          elephants.style.right = value * -0.12 + 'px'
-        }
         if (moon) {
           moon.style.opacity = (1 - value * 0.002).toString()
         }

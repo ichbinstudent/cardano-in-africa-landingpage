@@ -1,6 +1,6 @@
 ---
 title: How to stake ADA
-description: 'This tutorial is about how you can stake your ADA using Yoroi Wallet on mobile and desktop devices. Earn up to 6% per year on your Cardano investment.'
+description: 'This tutorial is about how you can stake your ADA using Yoroi Wallet on mobile and desktop devices. Earn up to 5% per year on your Cardano investment.'
 image: 'yoroi.png'
 ---
 

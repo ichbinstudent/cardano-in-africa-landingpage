@@ -3,7 +3,7 @@
     <div class="fixed top-0 w-full h-10 md:h-12 bg-white flex z-30">
       <nuxt-link
         class="text-md md:text-2xl font-semibold my-auto align-middle flex rounded-lg"
-        :to="{name: 'tutorials' }"
+        :to="{ name: 'projects' }"
       >
         <outline-chevron-left-icon class="h-6 md:h-8 my-auto" />
         Back
@@ -17,18 +17,6 @@
       {{ page.description }}
     </p>
     <article class="prose lg:prose-xl">
-      <h2>Outline</h2>
-      <ul>
-        <li
-          v-for="link of page.toc"
-          :key="link.id"
-          :class="{ 'toc2': link.depth === 2, 'toc3': link.depth === 3 }"
-        >
-          <NuxtLink :to="`#${link.id}`">
-            {{ link.text }}
-          </NuxtLink>
-        </li>
-      </ul>
       <nuxt-content :document="page" />
     </article>
   </div>
@@ -43,7 +31,7 @@ export default Vue.extend({
     $content,
     route
   }) {
-    const page = await $content('tutorials/' + route.params.slug).fetch()
+    const page = await $content('projects/' + route.params.slug).fetch()
 
     return {
       page
