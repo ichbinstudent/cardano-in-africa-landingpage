@@ -270,44 +270,34 @@
       </transition>
     </header>
     <section id="home" class="relative w-full scroll-art">
-      <img
+      <nuxt-img
         id="moon"
         class="fixed mx-auto z-0"
-        src="/images/background/moon.svg"
+        src="/background/moon_0P6YSNt5u.svg"
         alt="Image of a moon"
-      >
-      <img id="stars" class="z-0" src="/images/background/stars.svg" alt="Background image of a night sky background">
-      <img
+      ></nuxt-img>
+      <nuxt-img id="stars" class="z-0" src="/background/stars_FjR_8B2bE.svg" alt="Background image of a night sky background"></nuxt-img>
+      <nuxt-img
         id="floor3"
         class="mountain z-0 top-auto"
-        src="/images/background/floor_3.png"
+        src="/background/floor_3_8iREISZXU.png"
         alt="Distant contours of a mountain range"
-      >
-      <img
+      ></nuxt-img>
+      <nuxt-img
         id="floor2"
         class="mountain z-0 top-auto"
-        src="/images/background/floor_2.png"
+        src="/background/floor_2_GHnrrjpCz.png"
         alt="Distant contours of a mountain range"
-      >
-      <img
+      ></nuxt-img>
+      <nuxt-img
         id="floor"
         class="mountain top-auto"
-        src="/images/background/floor.png"
+        src="/background/floor_ftJhey9gP.png"
         alt="The shadow of a tree and two elephants walking."
-      >
+      ></nuxt-img>
       <div
         id="details-btn"
-        class="
-          uppercase
-          display-inline-block
-          bg-white
-          decoration-none
-          p-3
-          rounded-xl
-          text-2xl
-          z-20
-          cursor-pointer
-        "
+        class="uppercase display-inline-block bg-white decoration-none p-3 rounded-xl text-2xl z-20 cursor-pointer"
         @click="scrollIntoView('#about')"
       >
         Learn more
