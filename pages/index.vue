@@ -14,7 +14,7 @@
     >
       <div class="max-w-7xl w-full mx-auto flex justify-between items-center px-4 md:px-16">
         <div class="logo md:m-0 cursor-pointer" @click="scrollIntoView('#home')">
-          <nuxt-img src="/icon_white_s2EKJI4-H.svg" width="60px" height="60px" style="color: white;" />
+          <nuxt-img alt="Logo" src="/icon_white_s2EKJI4-H.svg" width="60px" height="60px" style="color: white;" />
         </div>
         <ul
           class="list-none content-center items-center text-white hidden md:flex"
@@ -276,7 +276,12 @@
         src="/background/moon_0P6YSNt5u.svg"
         alt="Image of a moon"
       />
-      <nuxt-img id="stars" class="z-0" src="/background/stars_FjR_8B2bE.svg" alt="Background image of a night sky background" />
+      <nuxt-img
+        id="stars"
+        class="z-0"
+        src="/background/stars_FjR_8B2bE.svg"
+        alt="Background image of a night sky background"
+      />
       <nuxt-img
         id="floor3"
         class="mountain z-0 top-auto"
@@ -371,7 +376,11 @@
           <h5 class="underline mt-1">
             Pool ID (click to copy)
           </h5>
+          <label for="pool-id" class="hidden" aria-hidden="false">
+            Pool Id
+          </label>
           <input
+            id="pool-id"
             type="text"
             class="overflow-ellipsis rounded-lg bg-primary p-1 cursor-pointer border border-primary-lightest"
             value="9e4ecaff3dac5c4c754a96cad961b404b9eab497afe4357160bb21c7"
@@ -407,7 +416,8 @@
         "
       >
         <p>
-          <a target="_blank" rel="nofollow noopener" href="https://www.freepik.com">Illustrations designed by Freepik</a>
+          <a target="_blank" rel="nofollow noopener" href="https://www.freepik.com">Illustrations designed by
+            Freepik</a>
           | Copyright by David Höglinger
         </p>
       </div>
@@ -418,6 +428,8 @@
     >
       <img
         class="h-8 w-8"
+        height="2rem"
+        width="2rem"
         src="/keyboard_arrow_up_black_24dp.svg"
         alt="Arrow pointing upwards"
       >

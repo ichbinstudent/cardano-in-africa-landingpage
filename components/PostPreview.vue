@@ -2,6 +2,7 @@
   <li class="transition-all duration-500 ease-in-out">
     <nuxt-link :to="{name: category + '-slug', params: { slug: post.slug }}">
       <nuxt-img
+        alt="Preview image"
         class="rounded-lg"
         :src="'/content/previews/' + post.image"
         width="400"

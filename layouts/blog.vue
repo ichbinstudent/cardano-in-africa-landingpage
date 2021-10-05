@@ -10,6 +10,8 @@
     >
       <img
         class="h-8 w-8"
+        height="2rem"
+        width="2rem"
         src="/keyboard_arrow_up_black_24dp.svg"
         alt="Arrow up icon"
       >
