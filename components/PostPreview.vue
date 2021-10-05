@@ -3,7 +3,7 @@
     <nuxt-link :to="{name: category + '-slug', params: { slug: post.slug }}">
       <nuxt-img
         class="rounded-lg"
-        :src="'/images/content/previews/' + post.image"
+        :src="'/content/previews/' + post.image"
         width="400"
         height="300"
         fit="contain"

@@ -94,6 +94,11 @@ export default {
 
   // Content module configuration: https://go.nuxtjs.dev/config-content
   content: {
+    markdown: {
+      prism: {
+        theme: 'prism-themes/themes/prism-material-oceanic.css'
+      }
+    }
   },
 
   // Build Configuration: https://go.nuxtjs.dev/config-build
@@ -108,6 +113,10 @@ export default {
   },
 
   image: {
+    imagekit: {
+      baseURL: 'https://ik.imagekit.io/kemitandsure/cia'
+    },
+    provider: 'imagekit',
     screens: {
       xs: 320,
       sm: 640,

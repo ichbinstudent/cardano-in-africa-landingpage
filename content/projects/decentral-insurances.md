@@ -1,7 +1,7 @@
 ---
 title: Decentral Insurances
 description: 'Insurances are an essential part of our society. To bring insurances to the unbanked, we want to build a decentral, transparent and cooperative-based insurance - built on blockchain - governed by the people.'
-image: 'trust.png'
+image: 'trust_5AzMKgTB3.png'
 ---
 
 ## More details coming soon!

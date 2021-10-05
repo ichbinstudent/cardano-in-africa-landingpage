@@ -14,7 +14,7 @@
     >
       <div class="max-w-7xl w-full mx-auto flex justify-between items-center px-4 md:px-16">
         <div class="logo md:m-0 cursor-pointer" @click="scrollIntoView('#home')">
-          <nuxt-img src="/icon_white.svg" width="60px" height="60px" style="color: white;" />
+          <nuxt-img src="/icon_white_s2EKJI4-H.svg" width="60px" height="60px" style="color: white;" />
         </div>
         <ul
           class="list-none content-center items-center text-white hidden md:flex"
