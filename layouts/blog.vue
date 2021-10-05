@@ -10,7 +10,7 @@
     >
       <img
         class="h-8 w-8"
-        src="/static/keyboard_arrow_up_black_24dp.svg"
+        src="/keyboard_arrow_up_black_24dp.svg"
         alt="Arrow up icon"
       >
     </div>
