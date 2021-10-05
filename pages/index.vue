@@ -428,7 +428,7 @@
     >
       <img
         class="h-8 w-8"
-        src="/images/keyboard_arrow_up_black_24dp.svg"
+        src="/static/keyboard_arrow_up_black_24dp.svg"
         alt="Arrow pointing upwards"
       >
     </div>
