@@ -48,5 +48,8 @@
     "smoothscroll-polyfill": "^0.4.4",
     "tailwindcss": "^2.2.8",
     "prism-themes": "^1.9.0"
+  },
+  "resolutions": {
+    "sharp": "^0.28.0"
   }
 }
