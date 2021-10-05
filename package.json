@@ -45,6 +45,6 @@
     "tailwindcss": "^2.2.16"
   },
   "resolutions": {
-    "minipass": "2.7.0"
+    "minipass": "2.8.5"
   }
 }
