@@ -24,6 +24,7 @@ import Vue from 'vue'
 
 export default Vue.extend({
   layout: 'blog',
+
   async asyncData ({ $content }) {
     const posts = await $content('tutorials')
       .only(['title', 'image', 'tags', 'slug'])
@@ -31,6 +32,17 @@ export default Vue.extend({
       .fetch()
     return {
       posts
+    }
+  },
+
+  head () {
+    return {
+      title: 'Tutorials',
+      meta: [{
+        hid: 'description',
+        name: 'description',
+        content: 'Knowledge is power. In this section we want to help you find your way into the cardano ecosystem and learn how to use decentral apps and services. We also provide you with other sources where you can find high quality tutorials and guides.'
+      }]
     }
   }
 })

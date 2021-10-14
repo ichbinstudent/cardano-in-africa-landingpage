@@ -18,7 +18,12 @@
     </ul>
 
     <div class="absolute bottom-0 text-xs text-center w-full">
-      Icons made by <a href="https://www.freepik.com" target="_blank" rel="nofollow noopener" title="Freepik">Freepik</a> from <a href="https://www.flaticon.com/" target="_blank" rel="nofollow noopener" title="Flaticon">www.flaticon.com</a>
+      Icons made by <a
+        href="https://www.freepik.com"
+        target="_blank"
+        rel="nofollow noopener"
+        title="Freepik"
+      >Freepik</a> from <a href="https://www.flaticon.com/" target="_blank" rel="nofollow noopener" title="Flaticon">www.flaticon.com</a>
     </div>
   </div>
 </template>
@@ -36,6 +41,17 @@ export default Vue.extend({
       .fetch()
     return {
       posts
+    }
+  },
+
+  head () {
+    return {
+      title: 'Projects',
+      meta: [{
+        hid: 'description',
+        name: 'description',
+        content: 'We as the Cardano in Africa stake pool team have many ideas and projects that we want want to implement. Here you can find a list of all the upcoming and completed projects.'
+      }]
     }
   }
 })
