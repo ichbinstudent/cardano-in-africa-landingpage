@@ -324,7 +324,7 @@
         </p>
         <p class="text-white text-xl">
           To stay updated join our Telegram channel:
-          <a href="https://t.me/CardanoInAfrica">
+          <a href="https://t.me/CardanoInAfrica" target="_blank" rel="nofollow noopener">
             <svg
               role="img"
               class="inline ml-2"
