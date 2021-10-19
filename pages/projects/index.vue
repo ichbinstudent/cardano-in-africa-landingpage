@@ -17,14 +17,14 @@
       <PostPreview v-for="post in posts" :key="post.slug" :post="post" category="projects" />
     </ul>
 
-    <div class="absolute bottom-0 text-xs text-center w-full">
+    <p class="absolute bottom-0 left-auto right-auto text-xs text-center">
       Icons made by <a
         href="https://www.freepik.com"
         target="_blank"
         rel="nofollow noopener"
         title="Freepik"
       >Freepik</a> from <a href="https://www.flaticon.com/" target="_blank" rel="nofollow noopener" title="Flaticon">www.flaticon.com</a>
-    </div>
+    </p>
   </div>
 </template>
 
