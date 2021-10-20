@@ -16,7 +16,7 @@
     </div>
 
     <div
-      class="fixed bg-white rounded-lg p-2 right-8 md:right-16 bottom-16 z-50 cursor-pointer hover:bg-purple-200"
+      class="fixed bg-white rounded-lg p-2 right-8 md:right-16 bottom-16 z-50 cursor-pointer hover:bg-purple-200 shadow-lg"
       @click="scrollToTop"
     >
       <img
