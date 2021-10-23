@@ -1,7 +1,7 @@
 <template>
   <div class="w-full">
     <h1 class="text-2xl md:text-5xl font-black text-center">
-      Our Projects
+      {{ $t('projects.our_projects') }}
     </h1>
     <ul class="grid grid-cols-2 md:grid-cols-4 gap-8 mt-8">
       <PostPreview v-for="post in posts" :key="post.slug" :post="post" category="projects" />

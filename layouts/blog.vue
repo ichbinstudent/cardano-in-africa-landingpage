@@ -7,7 +7,7 @@
         @click.stop="$router.back()"
       >
         <outline-chevron-left-icon class="h-6 md:h-8 my-auto" />
-        Back
+        {{ $t('back') }}
       </button>
     </div>
 

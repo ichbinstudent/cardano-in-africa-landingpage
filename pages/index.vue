@@ -24,33 +24,33 @@
               class="navbar-home nuxt-link-active rounded-lg p-2 cursor-pointer"
               @click="scrollIntoView('#home')"
             >
-              Home
+              {{ $t('index.menu.home') }}
             </div>
           </li>
           <li class="mx-2">
             <div class="navbar-about rounded-lg p-2 cursor-pointer" @click="scrollIntoView('#about')">
-              About
+              {{ $t('index.menu.about') }}
             </div>
           </li>
           <li class="mx-2">
             <div class="navbar-stake rounded-lg p-2 cursor-pointer" @click="scrollIntoView('#stake')">
-              Stake
+              {{ $t('index.menu.stake') }}
             </div>
           </li>
           <li class="mx-2">
             <div class="navbar-contact rounded-lg p-2 cursor-pointer" @click="scrollIntoView('#contact')">
-              Contact
+              {{ $t('index.menu.contact') }}
             </div>
           </li>
           <li class="mx-2">
-            <nuxt-link class="rounded-lg p-2 inline-flex align-middle underline" :to="'projects'">
-              Projects
+            <nuxt-link class="rounded-lg p-2 inline-flex align-middle underline" :to="localePath('projects')">
+              {{ $t('index.menu.projects') }}
               <outline-external-link-icon class="ml-1 h-4 w-4 my-auto" />
             </nuxt-link>
           </li>
           <li class="mx-2">
-            <nuxt-link class="rounded-lg p-2 inline-flex align-middle underline" :to="'tutorials'">
-              Tutorials
+            <nuxt-link class="rounded-lg p-2 inline-flex align-middle underline" :to="localePath('tutorials')">
+              {{ $t('index.menu.tutorials') }}
               <outline-external-link-icon class="ml-1 h-4 w-4 my-auto" />
             </nuxt-link>
           </li>
@@ -60,7 +60,7 @@
           class="md:hidden rounded-md p-4 inline-flex items-center justify-center text-gray-200 hover:text-gray-500 hover:bg-gray-100 focus:outline-none focus:ring-2 focus:ring-inset focus:ring-indigo-500"
           @click="navbar = !navbar"
         >
-          <span class="sr-only">Open menu</span>
+          <span class="sr-only">{{ $t('index.menu.open') }}</span>
           <!-- Heroicon name: outline/menu -->
           <svg
             class="h-6 w-6"
@@ -96,7 +96,7 @@
                     class="rounded-md p-4 inline-flex items-center justify-center text-gray-200 hover:text-gray-500 hover:bg-gray-100 focus:outline-none focus:ring-2 focus:ring-inset focus:ring-indigo-500"
                     @click="navbar = !navbar"
                   >
-                    <span class="sr-only">Close menu</span>
+                    <span class="sr-only">{{ $t('index.menu.close') }}</span>
                     <!-- Heroicon name: outline/x -->
                     <svg
                       class="h-6 w-6"
@@ -134,7 +134,7 @@
                     <!--                      />-->
                     <!--                    </svg>-->
                     <span class="ml-3 text-base font-medium text-gray-200">
-                      Home
+                      {{ $t('index.menu.home') }}
                     </span>
                   </div>
 
@@ -159,7 +159,7 @@
                     <!--                      />-->
                     <!--                    </svg>-->
                     <span class="ml-3 text-base font-medium text-gray-200">
-                      About
+                      {{ $t('index.menu.about') }}
                     </span>
                   </div>
 
@@ -184,7 +184,7 @@
                     <!--                      />-->
                     <!--                    </svg>-->
                     <span class="ml-3 text-base font-medium text-gray-200">
-                      Stake
+                      {{ $t('index.menu.stake') }}
                     </span>
                   </div>
 
@@ -209,13 +209,13 @@
                     <!--                      />-->
                     <!--                    </svg>-->
                     <span class="ml-3 text-base font-medium text-gray-200">
-                      Contact
+                      {{ $t('index.menu.contact') }}
                     </span>
                   </div>
 
                   <nuxt-link
                     class="-m-3 p-3 flex items-center rounded-md cursor-pointer"
-                    to="projects"
+                    :to="localePath('projects')"
                   >
                     <!-- Heroicon name: outline/view-grid -->
                     <!--                    <svg-->
@@ -234,13 +234,13 @@
                     <!--                      />-->
                     <!--                    </svg>-->
                     <span class="ml-3 text-base font-medium text-gray-200 flex">
-                      Projects <outline-external-link-icon class="ml-1 h-4 w-4 my-auto" />
+                      {{ $t('index.menu.projects') }} <outline-external-link-icon class="ml-1 h-4 w-4 my-auto" />
                     </span>
                   </nuxt-link>
 
                   <nuxt-link
                     class="-m-3 p-3 flex items-center rounded-md cursor-pointer"
-                    to="tutorials"
+                    :to="localePath('tutorials')"
                   >
                     <!-- Heroicon name: outline/view-grid -->
                     <!--                    <svg-->
@@ -259,7 +259,7 @@
                     <!--                      />-->
                     <!--                    </svg>-->
                     <span class="ml-3 text-base font-medium text-gray-200 flex">
-                      Tutorials <outline-external-link-icon class="ml-1 h-4 w-4 my-auto" />
+                      {{ $t('index.menu.tutorials') }} <outline-external-link-icon class="ml-1 h-4 w-4 my-auto" />
                     </span>
                   </nuxt-link>
                 </nav>
@@ -305,25 +305,23 @@
         class="uppercase display-inline-block bg-white decoration-none p-3 rounded-xl text-2xl z-20 cursor-pointer"
         @click="scrollIntoView('#about')"
       >
-        Learn more
+        {{ $t('index.learn_more') }}
       </div>
     </section>
     <section id="about" class="content">
       <div class="pt-32 sm:pt-16 md:pt-0">
         <h1 class="text-3xl sm:text-5xl text-white mb-3 uppercase">
-          Cardano In Africa
+          {{ $t('index.about.title') }}
         </h1>
         <h4 class="text-2xl text-white mb-3">
-          Welcome to the unofficial stake pool for Cardano in Africa!
+          {{ $t('index.about.welcome') }}
         </h4>
         <p class="text-gray-200">
-          We're a stake pool for Cardano, and our goal is to spread the word about blockchain technology and the
-          adoption
-          of it in Africa.<br><br>
-          Help us reach our mission by joining our stake pool today.<br><br>
+          {{ $t('index.about.we_are') }}<br><br>
+          {{ $t('index.about.help_us') }}<br><br>
         </p>
         <p class="text-white text-xl">
-          To stay updated join our Telegram channel:
+          {{ $t('index.about.stay_updated') }}
           <a href="https://t.me/CardanoInAfrica" target="_blank" rel="nofollow noopener">
             <svg
               role="img"
@@ -345,11 +343,10 @@
     <section id="stake" class="z-10 content">
       <div class="text-gray-200 flex flex-col w-full md:max-w-5xl">
         <h2 class="text-5xl text-white mb-3">
-          Stake
+          {{ $t('index.stake.stake') }}
         </h2>
         <p class="text-md">
-          Join our cause to improve the education on blockchain and the adoption
-          of Cardano in Africa. You can find more technical details on
+          {{ $t('index.stake.join_our_cause') }}
           <a
             class="underline inline-flex flex-nowrap"
             href="https://adapools.org/pool/9e4ecaff3dac5c4c754a96cad961b404b9eab497afe4357160bb21c7"
@@ -358,20 +355,18 @@
           >ADAPools
             <outline-external-link-icon class="ml-1 h-4 w-4 my-auto" />
           </a>.<br><br>
-          The stake pool is reliably and securely hosted by professionals on powerful servers.
-          As stake pool operators we take our responsibility to maintain and secure the Cardano network very
-          seriously.<br>
-          You can check the uptime of our services on our <a
+          {{ $t('index.stake.the_stake_pool') }}<br>
+          {{ $t('index.stake.you_can_check') }} <a
             target="_blank"
             rel="noopener"
             class="underline inline-flex flex-nowrap"
             href="https://status.cardanoin.africa/"
-          >status page
+          >{{ $t('index.stake.status_page') }}
             <outline-external-link-icon class="ml-1 h-4 w-4 my-auto" />
           </a>.
         </p>
         <h4 class="text-2xl my-4">
-          Pool Details
+          {{ $t('index.stake.pool_details') }}
         </h4>
 
         <div
@@ -384,15 +379,15 @@
           "
         >
           <h5 class="underline">
-            Ticker
+            {{ $t('index.stake.ticker') }}
           </h5>
           CIA
           <h5 class="underline mt-1">
-            Pool Name
+            {{ $t('index.stake.pool_name') }}
           </h5>
-          Cardano in Africa
+          {{ $t('index.about.title') }}
           <h5 class="underline mt-1">
-            Pool ID (click to copy)
+            {{ $t('index.stake.pool_id') }}
           </h5>
           <label for="pool-id" class="hidden" aria-hidden="false">
             Pool Id
@@ -411,10 +406,10 @@
     <section id="contact" class="z-10 content text-gray-200">
       <div class="flex flex-col">
         <h2 class="text-5xl text-white mb-3">
-          Contact
+          {{ $t('index.contact.contact') }}
         </h2>
         <h4 class="text-xl my-4 overflow-ellipsis">
-          If you have any questions or want to join our team, feel free to send us an email at <a
+          {{ $t('index.contact.if_you_have') }}<a
             href="mailto:admin@cardanoin.africa"
           >admin@cardanoin.africa</a>
         </h4>

@@ -74,14 +74,24 @@ export default {
     '@nuxt/content',
     '@nuxtjs/sentry',
     '@nuxtjs/sitemap',
-    '@nuxt/image'
+    '@nuxt/image',
+    '@nuxtjs/i18n'
   ],
+
+  i18n: {
+    langDir: '~/lang/',
+    locales: [
+      { code: 'en', iso: 'en-US', file: 'en.js' },
+      { code: 'fr', iso: 'fr-FR', file: 'fr.js' }
+    ],
+    defaultLocale: 'en'
+  },
 
   sentry: {
     dsn: 'https://cb55688d41164198a828fa14777afdfe@o982101.ingest.sentry.io/5936850', // Enter your project's DSN here
     config: {
       integrations: [new Integrations.BrowserTracing()],
-      tracesSampleRate: 0.2
+      tracesSampleRate: 0.1
     }
   },
 
