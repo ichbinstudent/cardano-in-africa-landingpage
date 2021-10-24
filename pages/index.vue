@@ -454,15 +454,24 @@
 import Vue from 'vue'
 
 export default Vue.extend({
-  data () {
+  data: () => ({
+    navbar: false,
+    scrollUpdate: true
+  }),
+
+  head () {
     return {
-      navbar: false,
-      scrollUpdate: true
+      title: this.$t('index.title'),
+      meta: [
+        {
+          hid: 'description',
+          name: 'description',
+          content: this.$t('index.description')
+        }
+      ]
     }
   },
-  head: {
-    title: 'Home'
-  },
+
   mounted () {
     window.setInterval(() => {
       this.scrollUpdate = true

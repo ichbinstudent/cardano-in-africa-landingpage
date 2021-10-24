@@ -27,11 +27,11 @@ export default Vue.extend({
 
   head () {
     return {
-      title: 'Tutorials',
+      title: this.$t('tutorials.title'),
       meta: [{
         hid: 'description',
         name: 'description',
-        content: 'Knowledge is power. In this section we want to help you find your way into the cardano ecosystem and learn how to use decentral apps and services. We also provide you with other sources where you can find high quality tutorials and guides.'
+        content: this.$t('tutorials.description')
       }]
     }
   }

@@ -36,11 +36,11 @@ export default Vue.extend({
 
   head () {
     return {
-      title: 'Projects',
+      title: this.$t('projects.title'),
       meta: [{
         hid: 'description',
         name: 'description',
-        content: 'We as the Cardano in Africa stake pool team have many ideas and projects that we want want to implement. Here you can find a list of all the upcoming and completed projects.'
+        content: this.$t('projects.description')
       }]
     }
   }

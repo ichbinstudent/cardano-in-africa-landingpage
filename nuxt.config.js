@@ -10,36 +10,33 @@ export default {
   staticDir: './static',
 
   // Global page headers: https://go.nuxtjs.dev/config-head
-  head: {
-    titleTemplate: '%s | Cardano in Africa',
-    htmlAttrs: {
-      lang: 'en'
-    },
-    meta: [
-      { charset: 'utf-8' },
-      {
-        name: 'viewport',
-        content: 'width=device-width, initial-scale=1'
+  head () {
+    const i18nHead = this.$nuxtI18nHead({ addSeoAttributes: true })
+    return {
+      titleTemplate: '%s | Cardano in Africa',
+      htmlAttrs: {
+        ...i18nHead.htmlAttrs
       },
-      {
-        hid: 'description',
-        name: 'description',
-        content: 'Welcome to the homepage of the unofficial stake pool for Cardano in Africa. Here you can find more information about us and take a look at our tutorials on Cardano.'
-      },
-      {
-        name: 'format-detection',
-        content: 'telephone=no'
-      }
-    ],
-    script: [
-      // {
-      //   src: 'https://raw.githack.com/CristianDavideConte/universalSmoothScroll/master/js/universalsmoothscroll-min.js'
-      // }
-      // {
-      //   src: 'https://spysession.clientpanel.co/pixel/nneE4iUluNqk1qvh',
-      //   defer: true
-      // }
-    ]
+      meta: [
+        { charset: 'utf-8' },
+        {
+          name: 'viewport',
+          content: 'width=device-width, initial-scale=1'
+        },
+        {
+          name: 'format-detection',
+          content: 'telephone=no'
+        },
+        ...i18nHead.meta
+      ],
+      link: [...i18nHead.link],
+      script: [
+        // {
+        //   src: 'https://spysession.clientpanel.co/pixel/nneE4iUluNqk1qvh',
+        //   defer: true
+        // },
+      ]
+    }
   },
 
   // Global CSS: https://go.nuxtjs.dev/config-css
@@ -84,7 +81,8 @@ export default {
       { code: 'en', iso: 'en-US', file: 'en.js' },
       { code: 'fr', iso: 'fr-FR', file: 'fr.js' }
     ],
-    defaultLocale: 'en'
+    defaultLocale: 'en',
+    baseUrl: 'https://www.cardanoin.africa'
   },
 
   sentry: {
