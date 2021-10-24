@@ -27,11 +27,11 @@ export default Vue.extend({
 
   head () {
     return {
-      title: this.$t('tutorials.title'),
+      title: this.$t('tutorials.title').toString(),
       meta: [{
         hid: 'description',
         name: 'description',
-        content: this.$t('tutorials.description')
+        content: this.$t('tutorials.description').toString()
       }]
     }
   }

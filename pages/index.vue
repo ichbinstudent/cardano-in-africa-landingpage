@@ -461,12 +461,12 @@ export default Vue.extend({
 
   head () {
     return {
-      title: this.$t('index.title'),
+      title: this.$t('index.title').toString(),
       meta: [
         {
           hid: 'description',
           name: 'description',
-          content: this.$t('index.description')
+          content: this.$t('index.description').toString()
         }
       ]
     }
