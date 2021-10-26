@@ -51,8 +51,6 @@ export default {
     '@nuxt/typescript-build',
     // https://go.nuxtjs.dev/tailwindcss
     '@nuxtjs/tailwindcss',
-    // https://go.nuxtjs.dev/content
-    '@nuxt/content',
     '@nuxtjs/sentry',
     '@nuxt/image',
     '@nuxtjs/i18n',
@@ -66,6 +64,8 @@ export default {
 
   // Modules: https://go.nuxtjs.dev/config-modules
   modules: [
+    // https://go.nuxtjs.dev/content
+    '@nuxt/content'
   ],
 
   i18n: {
