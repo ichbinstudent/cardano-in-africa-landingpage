@@ -7,36 +7,29 @@ export default {
   // Target: https://go.nuxtjs.dev/config-target
   target: 'server',
 
-  staticDir: './static',
+  staticDir: '~/static',
 
   // Global page headers: https://go.nuxtjs.dev/config-head
-  head () {
-    const i18nHead = this.$nuxtI18nHead({ addSeoAttributes: true })
-    return {
-      titleTemplate: '%s | Cardano in Africa',
-      htmlAttrs: {
-        ...i18nHead.htmlAttrs
+  head: {
+    titleTemplate: '%s | Cardano in Africa',
+    meta: [
+      { charset: 'utf-8' },
+      {
+        name: 'viewport',
+        content: 'width=device-width, initial-scale=1'
       },
-      meta: [
-        { charset: 'utf-8' },
-        {
-          name: 'viewport',
-          content: 'width=device-width, initial-scale=1'
-        },
-        {
-          name: 'format-detection',
-          content: 'telephone=no'
-        },
-        ...i18nHead.meta
-      ],
-      link: [...i18nHead.link],
-      script: [
-        // {
-        //   src: 'https://spysession.clientpanel.co/pixel/nneE4iUluNqk1qvh',
-        //   defer: true
-        // },
-      ]
-    }
+      {
+        name: 'format-detection',
+        content: 'telephone=no'
+      }
+    ],
+    link: [],
+    script: [
+      // {
+      //   src: 'https://spysession.clientpanel.co/pixel/nneE4iUluNqk1qvh',
+      //   defer: true
+      // },
+    ]
   },
 
   // Global CSS: https://go.nuxtjs.dev/config-css
@@ -58,21 +51,21 @@ export default {
     '@nuxt/typescript-build',
     // https://go.nuxtjs.dev/tailwindcss
     '@nuxtjs/tailwindcss',
-    '@nuxtjs/pwa',
-    '@nuxtjs/google-analytics',
-    '@nuxt-hero-icons/outline/nuxt'
-  ],
-
-  // Modules: https://go.nuxtjs.dev/config-modules
-  modules: [
-    // https://go.nuxtjs.dev/axios
-    '@nuxtjs/axios',
     // https://go.nuxtjs.dev/content
     '@nuxt/content',
     '@nuxtjs/sentry',
     '@nuxt/image',
     '@nuxtjs/i18n',
-    '@nuxtjs/sitemap'
+    '@nuxtjs/sitemap',
+    '@nuxtjs/pwa',
+    '@nuxtjs/google-analytics',
+    '@nuxt-hero-icons/outline/nuxt',
+    // https://go.nuxtjs.dev/axios
+    '@nuxtjs/axios'
+  ],
+
+  // Modules: https://go.nuxtjs.dev/config-modules
+  modules: [
   ],
 
   i18n: {
