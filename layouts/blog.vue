@@ -2,7 +2,7 @@
   <div class="min-h-screen w-screen max-w-7xl mx-auto px-4 sm:px-16 pt-12 md:pt-16">
     <div class="fixed top-0 h-10 md:h-12 bg-white z-30">
       <button
-        class="text-md md:text-2xl font-semibold my-auto align-middle flex rounded-lg cursor-pointer outline-none"
+        class="text-md md:text-2xl font-semibold my-auto align-middle flex rounded-lg cursor-pointer outline-none p-2"
         aria-label="Go Back"
         @click.stop="$router.back()"
       >
