@@ -1,23 +1,12 @@
 <template>
   <div>
-    <header
-      class="
-        fixed
-        top-0
-        left-0
-        py-8
-        flex
-        text-lg lg:text-2xl
-        w-full
-        z-50
-      "
-    >
+    <header class="fixed top-0 left-0 py-4 flex text-lg lg:text-2xl w-full z-50">
       <div class="max-w-7xl w-full mx-auto flex justify-between items-center px-4 md:px-16">
         <div class="logo md:m-0 cursor-pointer" @click="scrollIntoView('#home')">
           <nuxt-img alt="Logo" src="/icon_white_s2EKJI4-H.svg" width="60px" height="60px" style="color: white;" />
         </div>
         <ul
-          class="list-none content-center items-center text-white hidden md:flex"
+          class="list-none content-center items-center text-white hidden md:flex whitespace-nowrap"
         >
           <li class="mx-2">
             <div
@@ -87,7 +76,7 @@
           <div
             class="rounded-lg shadow-lg ring-1 ring-black ring-opacity-5 bg-primary text-gray-200 divide-y-2 divide-gray-50"
           >
-            <div class="pt-6 pb-6 px-5">
+            <div class="py-6 px-5">
               <div class="flex items-center justify-between">
                 <div />
                 <div class="-mr-3 ">
@@ -137,7 +126,6 @@
                       {{ $t('index.menu.home') }}
                     </span>
                   </div>
-
                   <div
                     class="navbar-about -m-3 p-3 flex items-center rounded-md cursor-pointer"
                     @click="() => {navbar = !navbar; scrollIntoView('#about')}"
@@ -162,7 +150,6 @@
                       {{ $t('index.menu.about') }}
                     </span>
                   </div>
-
                   <div
                     class="navbar-stake -m-3 p-3 flex items-center rounded-md cursor-pointer"
                     @click="() => {navbar = !navbar; scrollIntoView('#stake')}"
@@ -187,7 +174,6 @@
                       {{ $t('index.menu.stake') }}
                     </span>
                   </div>
-
                   <div
                     class="navbar-contact -m-3 p-3 flex items-center rounded-md cursor-pointer"
                     @click="() => {navbar = !navbar; scrollIntoView('#contact')}"
@@ -212,7 +198,6 @@
                       {{ $t('index.menu.contact') }}
                     </span>
                   </div>
-
                   <nuxt-link
                     class="-m-3 p-3 flex items-center rounded-md cursor-pointer"
                     :to="localePath('projects')"
@@ -237,7 +222,6 @@
                       {{ $t('index.menu.projects') }} <outline-external-link-icon class="ml-1 h-4 w-4 my-auto" />
                     </span>
                   </nuxt-link>
-
                   <nuxt-link
                     class="-m-3 p-3 flex items-center rounded-md cursor-pointer"
                     :to="localePath('tutorials')"
@@ -308,8 +292,9 @@
         {{ $t('index.learn_more') }}
       </div>
     </section>
-    <section id="about" class="content">
-      <div class="pt-32 sm:pt-16 md:pt-0">
+    <section id="about" class="content flex flex-col">
+      <div id="gradient" />
+      <div class="md:pt-0 my-auto">
         <h1 class="text-3xl sm:text-5xl text-white mb-3 uppercase">
           {{ $t('index.about.title') }}
         </h1>
@@ -339,10 +324,11 @@
           </a>
         </p>
       </div>
+      <div id="gradient-bottom" class="mb-0 mt-auto" />
     </section>
     <section id="stake" class="z-10 content">
       <div class="text-gray-200 flex flex-col w-full md:max-w-5xl">
-        <h2 class="text-5xl text-white mb-3">
+        <h2 class="text-4xl md:text-5xl text-white mb-3">
           {{ $t('index.stake.stake') }}
         </h2>
         <p class="text-md">
@@ -405,7 +391,7 @@
     </section>
     <section id="contact" class="z-10 content text-gray-200">
       <div class="flex flex-col">
-        <h2 class="text-5xl text-white mb-3">
+        <h2 class="text-4xl md:text-5xl text-white mb-3">
           {{ $t('index.contact.contact') }}
         </h2>
         <h4 class="text-xl my-4 overflow-ellipsis">
@@ -504,7 +490,7 @@ export default Vue.extend({
       })
 
       const value = window.scrollY
-      if (value < 950) {
+      if (value < window.innerHeight * 1.1) {
         if (header.length > 0) {
           header[0].style.background = 'transparent'
         }
