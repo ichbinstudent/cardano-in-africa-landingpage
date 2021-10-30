@@ -35,13 +35,18 @@ export default Vue.extend({
   },
 
   head () {
+    const i18head = this.$nuxtI18nHead({ addSeoAttributes: true })
     return {
       title: this.$t('projects.title').toString(),
       meta: [{
         hid: 'description',
         name: 'description',
-        content: this.$t('projects.description').toString()
-      }]
+        content: this.$t('projects.description').toString(),
+        ...i18head.meta
+      }
+      ],
+      link: [...i18head.link],
+      htmlAttrs: { ...i18head.htmlAttrs }
     }
   }
 })
