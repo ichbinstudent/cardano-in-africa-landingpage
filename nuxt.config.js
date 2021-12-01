@@ -54,7 +54,6 @@ export default {
     '@nuxtjs/sentry',
     '@nuxt/image',
     '@nuxtjs/i18n',
-    '@nuxtjs/sitemap',
     '@nuxtjs/pwa',
     '@nuxtjs/google-analytics',
     '@nuxt-hero-icons/outline/nuxt',
@@ -65,14 +64,23 @@ export default {
   // Modules: https://go.nuxtjs.dev/config-modules
   modules: [
     // https://go.nuxtjs.dev/content
-    '@nuxt/content'
+    '@nuxt/content',
+    '@nuxtjs/sitemap',
   ],
 
   i18n: {
     langDir: '~/lang/',
     locales: [
-      { code: 'en', iso: 'en-US', file: 'en.js' },
-      { code: 'fr', iso: 'fr-FR', file: 'fr.js' }
+      {
+        code: 'en',
+        iso: 'en-US',
+        file: 'en.js'
+      },
+      {
+        code: 'fr',
+        iso: 'fr-FR',
+        file: 'fr.js'
+      }
     ],
     defaultLocale: 'en',
     baseUrl: 'https://www.cardanoin.africa'
@@ -110,7 +118,11 @@ export default {
   },
 
   sitemap: {
-    hostname: 'https://cardanoin.africa'
+    hostname: 'https://cardanoin.africa',
+    i18n: {
+      locales: ['en', 'fr'],
+      routesNameSeparator: '___'
+    },
   },
 
   loading: './components/LoadingComponent.vue',
