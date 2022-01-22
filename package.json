@@ -3,11 +3,10 @@
     "dev": "nuxi dev",
     "build": "nuxi build",
     "start": "nuxi preview",
-    "generate": "nuxt generate",
+    "generate": "nuxi generate",
     "lint:js": "eslint --ext \".js,.vue\" --ignore-path .gitignore .",
     "lint": "yarn lint:js",
     "vue-i18n-extract": "vue-i18n-extract report --vueFiles \"./components/**/*.?(js|ts|vue)\" --languageFiles \"./lang/*.?(json|yml|yaml|js)\"",
-    "gen": "graphql-codegen --config config.yml"
   },
   "name": "cardano-in-africa-landingpage",
   "version": "1.0.0",
