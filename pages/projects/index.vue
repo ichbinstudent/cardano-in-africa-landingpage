@@ -45,8 +45,7 @@ export default Vue.extend({
         await $axios.get("blogs", {
           params: { "filters[category_name][$eq]": "projects" },
         })
-      ).data,
-      global: (await $axios.get("global")).data,
+      ).data
     };
   },
 
