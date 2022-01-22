@@ -1,9 +1,9 @@
 {
   "scripts": {
     "dev": "nuxi dev",
-    "build": "nuxi build",
+    "build": "nuxt build",
     "start": "nuxi preview",
-    "generate": "nuxi generate",
+    "generate": "nuxt generate",
     "lint:js": "eslint --ext \".js,.vue\" --ignore-path .gitignore .",
     "lint": "yarn lint:js",
     "vue-i18n-extract": "vue-i18n-extract report --vueFiles \"./components/**/*.?(js|ts|vue)\" --languageFiles \"./lang/*.?(json|yml|yaml|js)\""
