@@ -1,44 +1,51 @@
 <template>
   <div class="w-full">
-    <h1 class="text-2xl md:text-5xl font-black text-center">
-      {{ $t('tutorials.tutorials') }}
+    <h1 class="uk-heading-large uk-heading-divider">
+      {{ $t("tutorials.tutorials") }}
     </h1>
-    <ul class="grid grid-cols-2 md:grid-cols-4 gap-8 mt-8">
-      <PostPreview v-for="post in posts" :key="post.slug" :post="post" category="tutorials" />
-    </ul>
+    <div uk-grid>
+      <PostPreview
+        v-for="post in posts.data"
+        :key="post.id"
+        :post="post"
+        category="tutorials"
+      />
+    </div>
   </div>
 </template>
 
 <script lang="ts">
-import Vue from 'vue'
+import Vue from "vue";
 
 export default Vue.extend({
-  layout: 'blog',
+  layout: "blog",
 
-  async asyncData ({ $content }) {
-    const posts = await $content('tutorials')
-      .only(['title', 'image', 'tags', 'slug'])
-      .sortBy('createdAt', 'desc')
-      .fetch()
+  async asyncData({ $axios }) {
     return {
-      posts
-    }
+      posts: (
+        await $axios.get("blogs", {
+          params: { "filters[category_name][$eq]": "tutorials" },
+        })
+      ).data,
+      global: (await $axios.get("global")).data,
+    };
   },
 
-  head () {
-    const i18head = this.$nuxtI18nHead({ addSeoAttributes: true })
+  head() {
+    const i18head = this.$nuxtI18nHead({ addSeoAttributes: true });
     return {
-      title: this.$t('tutorials.title').toString(),
-      meta: [{
-        hid: 'description',
-        name: 'description',
-        content: this.$t('tutorials.description').toString(),
-        ...i18head.meta
-      }
+      title: this.$t("tutorials.title").toString(),
+      meta: [
+        {
+          hid: "description",
+          name: "description",
+          content: this.$t("tutorials.description").toString(),
+          ...i18head.meta,
+        },
       ],
       link: [...i18head.link],
-      htmlAttrs: { ...i18head.htmlAttrs }
-    }
-  }
-})
+      htmlAttrs: { ...i18head.htmlAttrs },
+    };
+  },
+});
 </script>

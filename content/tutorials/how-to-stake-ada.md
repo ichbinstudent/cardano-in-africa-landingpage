@@ -20,34 +20,34 @@ You can also download the mobile wallets.
 
 ## 2.1 Select your language
 
-<nuxt-img src="/content/how-to-stake-ada/select_language_vqYJuwAOg.png" alt="Select your language"></nuxt-img>
+<img src="https://ik.imagekit.io/kemitandsure/cia/content/how-to-stake-ada/select_language_vqYJuwAOg.png" alt="Select your language"></img>
 
 ## 2.2 Agree to the terms of use
 
-<nuxt-img src="/content/how-to-stake-ada/tos_Hmq6yrhbo.png" alt="Agree to the tos"></nuxt-img>
+<img src="https://ik.imagekit.io/kemitandsure/cia/content/how-to-stake-ada/tos_Hmq6yrhbo.png" alt="Agree to the tos"></img>
 
 ## 2.3 Select "Create wallet"
 
-<nuxt-img src="/content/how-to-stake-ada/create_wallet_7IERPAXqfw.png" alt="Create wallet"></nuxt-img>
+<img src="https://ik.imagekit.io/kemitandsure/cia/content/how-to-stake-ada/create_wallet_7IERPAXqfw.png" alt="Create wallet"></img>
 
 ## 2.4 Select "Cardano"
 
-<nuxt-img src="/content/how-to-stake-ada/select_cardano_8Oc4G77eUV.png" alt="Select cardano"></nuxt-img>
+<img src="https://ik.imagekit.io/kemitandsure/cia/content/how-to-stake-ada/select_cardano_8Oc4G77eUV.png" alt="Select cardano"></img>
 
 ## 2.5 Select "Create wallet"
 
-<nuxt-img src="/content/how-to-stake-ada/create_wallet2_Id18lMZ9G.png" alt="create wallet"></nuxt-img>
+<img src="https://ik.imagekit.io/kemitandsure/cia/content/how-to-stake-ada/create_wallet2_Id18lMZ9G.png" alt="create wallet"></img>
 
 ## 2.6 Enter a wallet name and a password
 
-<nuxt-img src="/content/how-to-stake-ada/enter_wallet_details_2id1CLTfK.png" alt="Enter wallet details"></nuxt-img>
+<img src="https://ik.imagekit.io/kemitandsure/cia/content/how-to-stake-ada/enter_wallet_details_2id1CLTfK.png" alt="Enter wallet details"></img>
 
 ## 2.7 Make sure that nobody can see your screen
 
 Now you have to make sure that nobody is around and can see your screen!
 If you have verified that click on continue.
 
-<nuxt-img src="/content/how-to-stake-ada/warning_b1fpK-mgjA.png" alt="Make sure nobody can see your screen!"></nuxt-img>
+<img src="https://ik.imagekit.io/kemitandsure/cia/content/how-to-stake-ada/warning_b1fpK-mgjA.png" alt="Make sure nobody can see your screen!"></img>
 
 ## 2.8 Write down the recovery phrase
 
@@ -56,29 +56,29 @@ If you loose access to your device on which you are creating this wallet, the on
 So make sure you write it down correctly at least one time. It's better to keep multiple copies of it in different locations.
 Never store those words on your hard drive!
 
-<nuxt-img src="/content/how-to-stake-ada/recovery_words_jt5bBSqKkV.png" alt="The recovery phrase"></nuxt-img>
+<img src="https://ik.imagekit.io/kemitandsure/cia/content/how-to-stake-ada/recovery_words_jt5bBSqKkV.png" alt="The recovery phrase"></img>
 
 ## 2.9 Verify the recovery phrase
 
 After writing down the recovery phrase you have to confirm it by selecting the words in the right order.
 
-<nuxt-img src="/content/how-to-stake-ada/verify_recovery_phrase_rADkgk2bSd.png" alt="Verify the recovery phrase"></nuxt-img>
+<img src="https://ik.imagekit.io/kemitandsure/cia/content/how-to-stake-ada/verify_recovery_phrase_rADkgk2bSd.png" alt="Verify the recovery phrase"></img>
 
 ## 2.10 Tick the boxes after you read them
 
 Tick the boxes but make sure to read and understand them.
 
-<nuxt-img src="/content/how-to-stake-ada/confirm_8_mI-npx4.png" alt="Confirm"></nuxt-img>
+<img src="https://ik.imagekit.io/kemitandsure/cia/content/how-to-stake-ada/confirm_8_mI-npx4.png" alt="Confirm"></img>
 
 ## 2.11 Setup done
 
-<nuxt-img src="/content/how-to-stake-ada/setup_done_l70aMYIEVL.png" alt="Setup done"></nuxt-img>
+<img src="https://ik.imagekit.io/kemitandsure/cia/content/how-to-stake-ada/setup_done_l70aMYIEVL.png" alt="Setup done"></img>
 
 # 3 Send ADA to your wallet
 
 ## 3.1 Get the receive-address
 
-<nuxt-img src="/content/how-to-stake-ada/get_receive_address_pZ0_6R4-W.png" alt="Get the receive-address"></nuxt-img>
+<img src="https://ik.imagekit.io/kemitandsure/cia/content/how-to-stake-ada/get_receive_address_pZ0_6R4-W.png" alt="Get the receive-address"></img>
 
 ## 3.2 Send the coins to this address
 
@@ -97,15 +97,15 @@ If you send the transaction directly from another wallet it should only take a f
 When selecting a stake pool make sure the pool size is smaller than 80% and has not more than 5% fees.
 In my example I pick the Cardano in Africa pool which has only 2% fees.
 
-<nuxt-img src="/content/how-to-stake-ada/select_stake_pool_mXaA2g9aw.png" alt="Select stake pool"></nuxt-img>
+<img src="https://ik.imagekit.io/kemitandsure/cia/content/how-to-stake-ada/select_stake_pool_mXaA2g9aw.png" alt="Select stake pool"></img>
 
 ## 4.2 Select delegate
 
-<nuxt-img src="/content/how-to-stake-ada/select_delegate_0kTe-qgue.png" alt='Select "delegate"'></nuxt-img>
+<img src="https://ik.imagekit.io/kemitandsure/cia/content/how-to-stake-ada/select_delegate_0kTe-qgue.png" alt='Select "delegate"'></img>
 
 ## 4.3 Confirm delegation
 
-<nuxt-img src="/content/how-to-stake-ada/confirm_delegation_N_NAf8UmsO.png" alt='Confirm delegation'></nuxt-img>
+<img src="https://ik.imagekit.io/kemitandsure/cia/content/how-to-stake-ada/confirm_delegation_N_NAf8UmsO.png" alt='Confirm delegation'></img>
 
 ## 4.4 Enter your password
 

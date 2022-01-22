@@ -1,6 +1,7 @@
-import { Integrations } from '@sentry/tracing'
+// import { Integrations } from '@sentry/tracing'
+import { defineNuxtConfig } from '@nuxt/bridge'
 
-export default {
+export default defineNuxtConfig({
   // Disable server-side rendering: https://go.nuxtjs.dev/ssr-mode
   ssr: true,
 
@@ -34,12 +35,15 @@ export default {
 
   // Global CSS: https://go.nuxtjs.dev/config-css
   css: [
+    'uikit/dist/css/uikit.min.css',
+    'uikit/dist/css/uikit.css',
     '@/static/style.scss'
   ],
 
   // Plugins to run before rendering page: https://go.nuxtjs.dev/config-plugins
   plugins: [
-    '~/plugins/smooth-scroll.client.js'
+    '~/plugins/smooth-scroll.client.js',
+    { src: '~/plugins/uikit.js', ssr: false },
   ],
 
   // Auto import components: https://go.nuxtjs.dev/config-components
@@ -47,25 +51,23 @@ export default {
 
   // Modules for dev and build (recommended): https://go.nuxtjs.dev/config-modules
   buildModules: [
-    // https://go.nuxtjs.dev/typescript
-    '@nuxt/typescript-build',
     // https://go.nuxtjs.dev/tailwindcss
     '@nuxtjs/tailwindcss',
-    '@nuxtjs/sentry',
+    // '@nuxtjs/sentry',
     '@nuxt/image',
     '@nuxtjs/i18n',
     '@nuxtjs/pwa',
     '@nuxtjs/google-analytics',
     '@nuxt-hero-icons/outline/nuxt',
     // https://go.nuxtjs.dev/axios
-    '@nuxtjs/axios'
+    '@nuxtjs/axios',
+    // '@nuxtjs/strapi'
   ],
 
   // Modules: https://go.nuxtjs.dev/config-modules
   modules: [
-    // https://go.nuxtjs.dev/content
-    '@nuxt/content',
     '@nuxtjs/sitemap',
+    '@nuxtjs/markdownit'
   ],
 
   i18n: {
@@ -86,35 +88,77 @@ export default {
     baseUrl: 'https://www.cardanoin.africa'
   },
 
-  sentry: {
-    dsn: 'https://cb55688d41164198a828fa14777afdfe@o982101.ingest.sentry.io/5936850', // Enter your project's DSN here
-    config: {
-      integrations: [new Integrations.BrowserTracing()],
-      tracesSampleRate: 0.1
-    }
-  },
+  // sentry: {
+  //   dsn: 'https://cb55688d41164198a828fa14777afdfe@o982101.ingest.sentry.io/5936850', // Enter your project's DSN here
+  //   config: {
+  //     integrations: [new Integrations.BrowserTracing()],
+  //     tracesSampleRate: 0.1
+  //   }
+  // },
 
   googleAnalytics: {
     id: 'UA-206162126-1'
   },
 
   // Axios module configuration: https://go.nuxtjs.dev/config-axios
-  axios: {},
+  axios: {
+    baseUrl: process.env.BACKEND_URL + '/api/'
+  },
 
-  // Content module configuration: https://go.nuxtjs.dev/config-content
-  content: {
-    markdown: {
-      prism: {
-        theme: 'prism-themes/themes/prism-material-oceanic.css'
-      }
-    }
+  strapi: {
+    url: process.env.BACKEND_URL,
+    prefix: '/api',
+    version: 'v4',
+    cookie: {},
+    entities: [
+      {
+        name: "blogs",
+        type: "collection",
+      },
+      {
+        name: "global",
+        type: "single",
+      },
+      {
+        name: "categories",
+        type: "collection",
+      },
+    ],
+  },
+
+  markdownit: {
+    preset: "default",
+    linkify: true,
+    breaks: true,
+    injected: true,
+    html: true,
+    use: [
+      [
+        'markdown-it-anchor',
+        {
+          level: 1,
+          // slugify: string => string,
+          permalink: true,
+          // renderPermalink: (slug, opts, state, permalink) => {},
+          permalinkClass: 'header-anchor',
+          permalinkSymbol: '#',
+          permalinkBefore: true
+        }
+      ],
+      'markdown-it-attrs',
+      'markdown-it-div',
+      'markdown-it-toc-done-right',
+      'markdown-it-emoji',
+      ['markdown-it-link-attributes', { attrs: { target: '_blank', rel: 'noopener' } }]
+    ]
   },
 
   // Build Configuration: https://go.nuxtjs.dev/config-build
   build: {
     // cache: true,
     extractCSS: true,
-    optimizeCSS: true
+    optimizeCSS: true,
+    // transpile: ['tslib', 'ts-invariant']
   },
 
   sitemap: {
@@ -152,4 +196,4 @@ export default {
       }
     }
   }
-}
+})

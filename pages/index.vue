@@ -351,7 +351,7 @@
             <outline-external-link-icon class="ml-1 h-4 w-4 my-auto" />
           </a>.
         </p>
-        <h4 class="text-2xl my-4">
+        <h4 class="text-2xl my-4 text-white">
           {{ $t('index.stake.pool_details') }}
         </h4>
 
@@ -364,15 +364,15 @@
             flex flex-col
           "
         >
-          <h5 class="underline">
+          <h5 class="underline text-white">
             {{ $t('index.stake.ticker') }}
           </h5>
           CIA
-          <h5 class="underline mt-1">
+          <h5 class="underline mt-1 text-white">
             {{ $t('index.stake.pool_name') }}
           </h5>
           {{ $t('index.about.title') }}
-          <h5 class="underline mt-1">
+          <h5 class="underline mt-1 text-white">
             {{ $t('index.stake.pool_id') }}
           </h5>
           <label for="pool-id" class="hidden" aria-hidden="false">
@@ -394,7 +394,7 @@
         <h2 class="text-4xl md:text-5xl text-white mb-3">
           {{ $t('index.contact.contact') }}
         </h2>
-        <h4 class="text-xl my-4 overflow-ellipsis">
+        <h4 class="text-xl my-4 overflow-ellipsis text-white">
           {{ $t('index.contact.if_you_have') }}<a
             href="mailto:admin@cardanoin.africa"
           >admin@cardanoin.africa</a>
@@ -421,18 +421,7 @@
         </p>
       </div>
     </footer>
-    <div
-      class="fixed bg-white rounded-lg p-2 right-8 md:right-16 bottom-16 z-50 cursor-pointer hover:bg-purple-200"
-      @click="scrollToTop"
-    >
-      <img
-        class="h-8 w-8"
-        height="2rem"
-        width="2rem"
-        src="/keyboard_arrow_up_black_24dp.svg"
-        alt="Arrow pointing upwards"
-      >
-    </div>
+    <a href="#top" class="fixed right-8 md:right-16 bottom-16 z-50" uk-totop />
   </div>
 </template>
 

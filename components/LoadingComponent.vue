@@ -9,21 +9,23 @@
 </template>
 
 <script lang="ts">
-import Vue from 'vue'
+import Vue from "vue";
 
 export default Vue.extend({
-  data: () => ({
-    loading: false
-  }),
+  data() {
+    return {
+      loading: false,
+    };
+  },
   methods: {
-    start () {
-      this.loading = true
+    start() {
+      this.loading = true;
     },
-    finish () {
-      this.loading = false
-    }
-  }
-})
+    finish() {
+      this.loading = false;
+    },
+  },
+});
 </script>
 
 <style scoped>
@@ -66,17 +68,26 @@ export default Vue.extend({
 }
 
 @-webkit-keyframes sk-bouncedelay {
-  0%, 80%, 100% { -webkit-transform: scale(0) }
-  40% { -webkit-transform: scale(1.0) }
+  0%,
+  80%,
+  100% {
+    -webkit-transform: scale(0);
+  }
+  40% {
+    -webkit-transform: scale(1);
+  }
 }
 
 @keyframes sk-bouncedelay {
-  0%, 80%, 100% {
+  0%,
+  80%,
+  100% {
     -webkit-transform: scale(0);
     transform: scale(0);
-  } 40% {
-      -webkit-transform: scale(1.0);
-      transform: scale(1.0);
-    }
+  }
+  40% {
+    -webkit-transform: scale(1);
+    transform: scale(1);
+  }
 }
 </style>
