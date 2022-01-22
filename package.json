@@ -53,5 +53,8 @@
     "smoothscroll-polyfill": "^0.4.4",
     "tailwindcss": "^3.0.15",
     "vue-i18n-extract": "^2.0.4"
+  },
+  "resolutions": {
+    "sharp": "https://registry.yarnpkg.com/@favware/skip-dependency/-/skip-dependency-1.0.2.tgz"
   }
 }
