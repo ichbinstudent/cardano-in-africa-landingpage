@@ -1,7 +1,6 @@
-// import { Integrations } from '@sentry/tracing'
-import { defineNuxtConfig } from '@nuxt/bridge'
+import { Integrations } from '@sentry/tracing'
 
-export default defineNuxtConfig({
+export default {
   // Disable server-side rendering: https://go.nuxtjs.dev/ssr-mode
   ssr: true,
 
@@ -53,7 +52,8 @@ export default defineNuxtConfig({
   buildModules: [
     // https://go.nuxtjs.dev/tailwindcss
     '@nuxtjs/tailwindcss',
-    // '@nuxtjs/sentry',
+    '@nuxtjs/sentry',
+    '@nuxt/typescript-build',
     '@nuxt/image',
     '@nuxtjs/i18n',
     '@nuxtjs/pwa',
@@ -88,13 +88,13 @@ export default defineNuxtConfig({
     baseUrl: 'https://www.cardanoin.africa'
   },
 
-  // sentry: {
-  //   dsn: 'https://cb55688d41164198a828fa14777afdfe@o982101.ingest.sentry.io/5936850', // Enter your project's DSN here
-  //   config: {
-  //     integrations: [new Integrations.BrowserTracing()],
-  //     tracesSampleRate: 0.1
-  //   }
-  // },
+  sentry: {
+    dsn: 'https://cb55688d41164198a828fa14777afdfe@o982101.ingest.sentry.io/5936850', // Enter your project's DSN here
+    config: {
+      integrations: [new Integrations.BrowserTracing()],
+      tracesSampleRate: 0.1
+    }
+  },
 
   googleAnalytics: {
     id: 'UA-206162126-1'
@@ -196,4 +196,4 @@ export default defineNuxtConfig({
       }
     }
   }
-})
+}
