@@ -45,6 +45,12 @@ export default {
     contact: {
       contact: 'Contact',
       if_you_have: 'If you have any questions or want to join our team, feel free to send us an email at '
+    },
+    footer: {
+      privacy_policy: "Privacy Policy",
+      pp_href: "https://www.iubenda.com/privacy-policy/28870264",
+      cookie_policy: "Cookie Policy",
+      cp_href: "https://www.iubenda.com/privacy-policy/28870264/cookie-policy"
     }
   }
 }

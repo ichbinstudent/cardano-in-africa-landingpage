@@ -3,7 +3,7 @@
     <header class="fixed top-0 left-0 py-4 flex text-lg lg:text-2xl w-full z-50">
       <div class="max-w-7xl w-full mx-auto flex justify-between items-center px-4 md:px-16">
         <div class="logo md:m-0 cursor-pointer" @click="scrollIntoView('#home')">
-          <nuxt-img alt="Logo" src="/icon_white_s2EKJI4-H.svg" width="60px" height="60px" style="color: white;" />
+          <nuxt-img alt="Logo" src="/icon_white_s2EKJI4-H.svg" width="60px" height="60px" style="color: white;"/>
         </div>
         <ul
           class="list-none content-center items-center text-white hidden md:flex whitespace-nowrap"
@@ -34,13 +34,13 @@
           <li class="mx-2">
             <nuxt-link class="rounded-lg p-2 inline-flex align-middle underline" :to="localePath('projects')">
               {{ $t('index.menu.projects') }}
-              <outline-external-link-icon class="ml-1 h-4 w-4 my-auto" />
+              <outline-external-link-icon class="ml-1 h-4 w-4 my-auto"/>
             </nuxt-link>
           </li>
           <li class="mx-2">
             <nuxt-link class="rounded-lg p-2 inline-flex align-middle underline" :to="localePath('tutorials')">
               {{ $t('index.menu.tutorials') }}
-              <outline-external-link-icon class="ml-1 h-4 w-4 my-auto" />
+              <outline-external-link-icon class="ml-1 h-4 w-4 my-auto"/>
             </nuxt-link>
           </li>
         </ul>
@@ -59,7 +59,7 @@
             stroke="currentColor"
             aria-hidden="true"
           >
-            <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M4 6h16M4 12h16M4 18h16" />
+            <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M4 6h16M4 12h16M4 18h16"/>
           </svg>
         </button>
       </div>
@@ -78,7 +78,7 @@
           >
             <div class="py-6 px-5">
               <div class="flex items-center justify-between">
-                <div />
+                <div/>
                 <div class="-mr-3 ">
                   <button
                     type="button"
@@ -95,7 +95,7 @@
                       stroke="currentColor"
                       aria-hidden="true"
                     >
-                      <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M6 18L18 6M6 6l12 12" />
+                      <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M6 18L18 6M6 6l12 12"/>
                     </svg>
                   </button>
                 </div>
@@ -219,7 +219,7 @@
                     <!--                      />-->
                     <!--                    </svg>-->
                     <span class="ml-3 text-base font-medium text-gray-200 flex">
-                      {{ $t('index.menu.projects') }} <outline-external-link-icon class="ml-1 h-4 w-4 my-auto" />
+                      {{ $t('index.menu.projects') }} <outline-external-link-icon class="ml-1 h-4 w-4 my-auto"/>
                     </span>
                   </nuxt-link>
                   <nuxt-link
@@ -243,7 +243,7 @@
                     <!--                      />-->
                     <!--                    </svg>-->
                     <span class="ml-3 text-base font-medium text-gray-200 flex">
-                      {{ $t('index.menu.tutorials') }} <outline-external-link-icon class="ml-1 h-4 w-4 my-auto" />
+                      {{ $t('index.menu.tutorials') }} <outline-external-link-icon class="ml-1 h-4 w-4 my-auto"/>
                     </span>
                   </nuxt-link>
                 </nav>
@@ -293,7 +293,7 @@
       </div>
     </section>
     <section id="about" class="content flex flex-col">
-      <div id="gradient" />
+      <div id="gradient"/>
       <div class="md:pt-0 my-auto">
         <h1 class="text-3xl sm:text-5xl text-white mb-3 uppercase">
           {{ $t('index.about.title') }}
@@ -324,7 +324,7 @@
           </a>
         </p>
       </div>
-      <div id="gradient-bottom" class="mb-0 mt-auto" />
+      <div id="gradient-bottom" class="mb-0 mt-auto"/>
     </section>
     <section id="stake" class="z-10 content">
       <div class="text-gray-200 flex flex-col w-full md:max-w-5xl">
@@ -339,30 +339,24 @@
             target="_blank"
             rel="noopener"
           >ADAPools
-            <outline-external-link-icon class="ml-1 h-4 w-4 my-auto" />
+            <outline-external-link-icon class="ml-1 h-4 w-4 my-auto"/>
           </a>.<br><br>
           {{ $t('index.stake.the_stake_pool') }}<br>
           {{ $t('index.stake.you_can_check') }} <a
-            target="_blank"
-            rel="noopener"
-            class="underline inline-flex flex-nowrap"
-            href="https://status.cardanoin.africa/"
-          >{{ $t('index.stake.status_page') }}
-            <outline-external-link-icon class="ml-1 h-4 w-4 my-auto" />
-          </a>.
+          target="_blank"
+          rel="noopener"
+          class="underline inline-flex flex-nowrap"
+          href="https://status.cardanoin.africa/"
+        >{{ $t('index.stake.status_page') }}
+          <outline-external-link-icon class="ml-1 h-4 w-4 my-auto"/>
+        </a>.
         </p>
         <h4 class="text-2xl my-4 text-white">
           {{ $t('index.stake.pool_details') }}
         </h4>
 
         <div
-          class="
-            bg-primary-dark
-            rounded-lg
-            border border-primary-lightest
-            p-4
-            flex flex-col
-          "
+          class="bg-primary-dark rounded-lg border border-primary-lightest p-4 flex flex-col"
         >
           <h5 class="underline text-white">
             {{ $t('index.stake.ticker') }}
@@ -396,32 +390,38 @@
         </h2>
         <h4 class="text-xl my-4 overflow-ellipsis text-white">
           {{ $t('index.contact.if_you_have') }}<a
-            href="mailto:admin@cardanoin.africa"
-          >admin@cardanoin.africa</a>
+          href="mailto:admin@cardanoin.africa"
+        >admin@cardanoin.africa</a>
         </h4>
-        <p class="text-gray-200" />
+        <p class="text-gray-200"/>
       </div>
     </section>
     <footer>
-      <div
-        class="
-          flex
-          justify-center
-          items-center
-          h-32
-          text-white
-          px-8
-          text-center
-        "
-      >
-        <p>
+      <div class="flex flex-col justify-center items-center text-white px-8 text-center">
+        <a :href="$t('index.footer.pp_href')"
+           class="text-white mb-2"
+           :title="$t('index.footer.privacy_policy')"
+           target="_blank"
+           rel="nofollow noopener"
+        >
+          {{ $t('index.footer.privacy_policy') }}
+        </a>
+        <a :href="$t('index.footer.cp_href')"
+           class="text-white mb-2"
+           :title="$t('index.footer.cookie_policy')"
+           target="_blank"
+           rel="nofollow noopener"
+        >
+          {{ $t('index.footer.cookie_policy') }}
+        </a>
+        <span class="mb-4">
           <a target="_blank" rel="nofollow noopener" href="https://www.freepik.com">Illustrations designed by
             Freepik</a>
           | Copyright by David Höglinger
-        </p>
+        </span>
       </div>
     </footer>
-    <a href="#top" class="fixed right-8 md:right-16 bottom-16 z-50" uk-totop />
+    <a href="#top" class="fixed right-8 md:right-16 bottom-16 z-50" uk-totop/>
   </div>
 </template>
 

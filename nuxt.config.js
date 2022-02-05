@@ -29,7 +29,7 @@ export default {
       //   src: 'https://spysession.clientpanel.co/pixel/nneE4iUluNqk1qvh',
       //   defer: true
       // },
-    ]
+    ],
   },
 
   // Global CSS: https://go.nuxtjs.dev/config-css
@@ -42,7 +42,12 @@ export default {
   // Plugins to run before rendering page: https://go.nuxtjs.dev/config-plugins
   plugins: [
     '~/plugins/smooth-scroll.client.js',
-    { src: '~/plugins/uikit.js', ssr: false },
+    '~/plugins/iubenda.client.js',
+    '~/plugins/gtag.client.js',
+    {
+      src: '~/plugins/uikit.js',
+      ssr: false
+    },
   ],
 
   // Auto import components: https://go.nuxtjs.dev/config-components
@@ -57,7 +62,7 @@ export default {
     '@nuxt/image',
     '@nuxtjs/i18n',
     '@nuxtjs/pwa',
-    '@nuxtjs/google-analytics',
+    // '@nuxtjs/google-analytics',
     '@nuxt-hero-icons/outline/nuxt',
     // https://go.nuxtjs.dev/axios
     '@nuxtjs/axios',
@@ -67,7 +72,8 @@ export default {
   // Modules: https://go.nuxtjs.dev/config-modules
   modules: [
     '@nuxtjs/sitemap',
-    '@nuxtjs/markdownit'
+    '@nuxtjs/markdownit',
+    '@nuxtjs/gtm'
   ],
 
   i18n: {
@@ -92,12 +98,15 @@ export default {
     dsn: 'https://cb55688d41164198a828fa14777afdfe@o982101.ingest.sentry.io/5936850', // Enter your project's DSN here
     config: {
       integrations: [new Integrations.BrowserTracing()],
-      tracesSampleRate: 0.1
-    }
+      tracesSampleRate: 0.2
+    },
   },
 
-  googleAnalytics: {
-    id: 'UA-206162126-1'
+  gtm: {
+    id: 'UA-206162126-1',
+    enabled: true,
+    respectDoNotTrack: false,
+    scriptURL: 'https://www.googletagmanager.com/gtag/js',
   },
 
   // Axios module configuration: https://go.nuxtjs.dev/config-axios
@@ -112,22 +121,22 @@ export default {
     cookie: {},
     entities: [
       {
-        name: "blogs",
-        type: "collection",
+        name: 'blogs',
+        type: 'collection',
       },
       {
-        name: "global",
-        type: "single",
+        name: 'global',
+        type: 'single',
       },
       {
-        name: "categories",
-        type: "collection",
+        name: 'categories',
+        type: 'collection',
       },
     ],
   },
 
   markdownit: {
-    preset: "default",
+    preset: 'default',
     linkify: true,
     breaks: true,
     injected: true,
@@ -149,7 +158,12 @@ export default {
       'markdown-it-div',
       'markdown-it-toc-done-right',
       'markdown-it-emoji',
-      ['markdown-it-link-attributes', { attrs: { target: '_blank', rel: 'noopener' } }]
+      ['markdown-it-link-attributes', {
+        attrs: {
+          target: '_blank',
+          rel: 'noopener'
+        }
+      }]
     ]
   },
 
