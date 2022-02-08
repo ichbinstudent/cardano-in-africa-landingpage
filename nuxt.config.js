@@ -113,26 +113,26 @@ export default {
     baseUrl: process.env.BACKEND_URL + '/api/'
   },
 
-  strapi: {
-    url: process.env.BACKEND_URL,
-    prefix: '/api',
-    version: 'v4',
-    cookie: {},
-    entities: [
-      {
-        name: 'blogs',
-        type: 'collection',
-      },
-      {
-        name: 'global',
-        type: 'single',
-      },
-      {
-        name: 'categories',
-        type: 'collection',
-      },
-    ],
-  },
+  // strapi: {
+  //   url: process.env.BACKEND_URL,
+  //   prefix: '/api',
+  //   version: 'v4',
+  //   cookie: {},
+  //   entities: [
+  //     {
+  //       name: 'blogs',
+  //       type: 'collection',
+  //     },
+  //     {
+  //       name: 'global',
+  //       type: 'single',
+  //     },
+  //     {
+  //       name: 'categories',
+  //       type: 'collection',
+  //     },
+  //   ],
+  // },
 
   markdownit: {
     preset: 'default',
