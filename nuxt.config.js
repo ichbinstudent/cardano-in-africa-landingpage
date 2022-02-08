@@ -25,6 +25,14 @@ export default {
     ],
     link: [],
     script: [
+      {
+        src: '//code.etracker.com/code/e.js',
+        async: true,
+        'data-secure-code': 'kxgX3g',
+        'data-respect-dnt': 'false',
+        'data-block-cookies': 'true',
+        id: '_etLoader'
+      },
       // {
       //   src: 'https://spysession.clientpanel.co/pixel/nneE4iUluNqk1qvh',
       //   defer: true
@@ -43,7 +51,6 @@ export default {
   plugins: [
     '~/plugins/smooth-scroll.client.js',
     '~/plugins/iubenda.client.js',
-    '~/plugins/gtag.client.js',
     {
       src: '~/plugins/uikit.js',
       ssr: false
@@ -73,7 +80,6 @@ export default {
   modules: [
     '@nuxtjs/sitemap',
     '@nuxtjs/markdownit',
-    '@nuxtjs/gtm'
   ],
 
   i18n: {
@@ -100,13 +106,6 @@ export default {
       integrations: [new Integrations.BrowserTracing()],
       tracesSampleRate: 0.2
     },
-  },
-
-  gtm: {
-    id: 'UA-206162126-1',
-    enabled: true,
-    respectDoNotTrack: false,
-    scriptURL: 'https://www.googletagmanager.com/gtag/js',
   },
 
   // Axios module configuration: https://go.nuxtjs.dev/config-axios

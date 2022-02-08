@@ -2,28 +2,42 @@ export default async function ({
   i18n,
 }, inject) {
   window._iub = window._iub || []
+  window.dataLayer = window.dataLayer || []
 
-  window._iub.csConfiguration = {
+  function gtag () {
+    dataLayer.push(arguments)
+  }
+
+  _iub.csConfiguration = {
+    'gdprAppliesGlobally': false,
     'countryDetection': true,
     'invalidateConsentWithoutLog': true,
     'consentOnContinuedBrowsing': false,
     'perPurposeConsent': true,
-    'enableTcf': true,
-    'enableRemoteConsent': true,
-    'googleAdditionalConsentMode': true,
     'lang': i18n.locale,
     'siteId': 2509614,
     'floatingPreferencesButtonDisplay': 'bottom-right',
-    'gdprAppliesGlobally': false,
+    'enableRemoteConsent': true,
+    'cookiePolicyInOtherWindow': true,
+    'purposes': '4',
     'cookiePolicyId': 28870264,
     'banner': {
       'closeButtonRejects': true,
       'acceptButtonDisplay': true,
       'customizeButtonDisplay': true,
       'rejectButtonDisplay': true,
-      'listPurposes': true,
       'explicitWithdrawal': true,
-      'position': 'bottom'
+      'position': 'bottom',
+      'listPurposes': true
+    },
+    callback: {
+      onConsentRead () {
+        if (_iub.cs.consent.purposes['4']) {
+          window._etracker.enableCookies('cardanoin.africa')
+        } else {
+          window._etracker.disableCookies('cardanoin.africa')
+        }
+      }
     }
   }
 

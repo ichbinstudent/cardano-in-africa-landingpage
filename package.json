@@ -14,12 +14,12 @@
   "dependencies": {
     "@nuxt/core": "^2.15.8",
     "@nuxtjs/axios": "^5.13.6",
-    "@nuxtjs/gtm": "^2.4.0",
     "@nuxtjs/i18n": "^7.2.0",
     "@nuxtjs/markdownit": "^2.0.0",
     "@nuxtjs/sentry": "^5.1.6",
     "@nuxtjs/sitemap": "^2.4.0",
     "@sentry/tracing": "^6.16.1",
+    "sharp": "https://registry.yarnpkg.com/@favware/skip-dependency/-/skip-dependency-1.0.2.tgz",
     "uikit": "^3.10.1"
   },
   "devDependencies": {

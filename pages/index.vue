@@ -506,6 +506,8 @@ export default Vue.extend({
 
       this.scrollUpdate = false
     })
+
+    this.$axios.get('blogs')
   },
   methods: {
     copyToClipboard (event: any) {
