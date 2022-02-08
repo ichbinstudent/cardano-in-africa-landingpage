@@ -4,10 +4,6 @@ export default async function ({
   window._iub = window._iub || []
   window.dataLayer = window.dataLayer || []
 
-  function gtag () {
-    dataLayer.push(arguments)
-  }
-
   _iub.csConfiguration = {
     'gdprAppliesGlobally': false,
     'countryDetection': true,
